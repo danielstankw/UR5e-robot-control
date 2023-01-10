@@ -1,0 +1,1170 @@
+00:18:30,511 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+00:18:30,527 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+00:18:30,528 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+00:18:30,532 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+00:18:30,533 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+00:18:30,534 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+00:18:30,535 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+00:18:30,536 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+00:18:30,537 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+00:43:46,178 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+00:43:46,196 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+00:43:46,196 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+00:43:46,200 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+00:43:46,201 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+00:43:46,202 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+00:43:46,202 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+00:43:46,204 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+00:43:46,205 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+01:05:00,239 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+01:05:00,262 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+01:05:00,263 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+01:05:00,268 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+01:05:00,269 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+01:05:00,269 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+01:05:00,270 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+01:05:00,271 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+01:05:00,272 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+16:10:41,092 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+16:10:41,116 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+16:10:41,117 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+16:12:57,055 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+16:12:57,076 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+16:12:57,077 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+16:14:18,873 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+16:14:18,893 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+16:14:18,893 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+16:30:53,867 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+16:30:53,885 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+16:30:53,885 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+16:31:08,700 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+16:31:08,703 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+16:31:08,704 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+16:31:51,311 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+16:31:51,330 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+16:31:51,330 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+16:31:56,418 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+16:31:56,419 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+16:31:56,420 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+16:32:21,153 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+16:35:09,690 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+16:35:09,709 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+16:35:09,709 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+16:35:09,722 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+16:35:09,723 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+16:35:09,724 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+16:35:12,756 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+16:35:12,758 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+16:35:12,758 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+16:37:12,729 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+16:37:12,746 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+16:37:12,747 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+16:37:12,751 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+16:37:12,752 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+16:37:12,752 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+16:37:19,465 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+16:37:19,467 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+16:37:19,467 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+16:38:43,237 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+16:38:43,257 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+16:38:43,257 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+16:38:43,261 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+16:38:43,262 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+16:38:43,262 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+16:38:43,263 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+16:38:43,264 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+16:38:43,265 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+16:48:55,424 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+16:48:55,443 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+16:48:55,443 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+16:48:55,447 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+16:48:55,448 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+16:48:55,449 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+16:48:55,450 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+16:48:55,451 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+16:48:55,451 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+16:49:14,930 [11] ERROR UniversalRobotsConnect.RTDEReceiver (null) - Did not decode all the data
+16:49:29,426 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+16:49:29,454 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+16:49:29,454 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+16:49:29,459 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+16:49:29,460 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+16:49:29,461 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+16:49:29,462 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+16:49:29,466 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+16:49:29,466 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+16:50:03,850 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+16:50:03,888 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+16:50:03,888 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+16:50:37,306 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+16:50:37,324 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+16:50:37,324 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+16:50:42,973 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+16:50:42,974 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+16:50:42,975 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+16:52:10,640 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+16:52:10,658 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+16:52:10,659 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+16:52:35,949 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+16:52:35,950 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+16:52:35,950 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+16:53:09,542 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+16:53:09,543 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+16:53:09,544 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+16:53:59,176 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+16:53:59,209 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+16:53:59,209 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+16:54:02,524 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+16:54:02,525 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+16:54:02,526 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+16:54:03,867 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+16:54:03,868 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+16:54:03,869 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+16:58:02,749 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+16:58:02,766 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+16:58:02,767 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+16:58:02,772 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+16:58:02,773 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+16:58:02,773 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+17:03:35,795 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+17:03:35,814 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+17:03:35,814 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+17:03:35,819 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+17:03:35,820 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+17:03:35,821 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+17:03:44,602 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+17:03:55,688 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+17:04:04,110 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+17:04:55,003 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+17:04:55,021 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+17:04:55,021 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+17:04:55,026 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+17:04:55,027 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+17:04:55,028 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+17:04:59,031 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+17:04:59,033 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+17:04:59,034 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+18:57:37,875 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+18:57:37,892 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+18:57:37,896 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+18:57:37,897 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+18:57:37,898 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+18:57:42,990 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+18:57:42,993 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+18:57:42,995 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+18:58:02,702 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+18:58:02,730 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+18:58:02,750 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+18:58:02,752 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+18:58:02,752 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+18:58:02,755 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+18:58:02,756 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+18:58:02,758 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+18:59:56,683 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+18:59:56,701 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+18:59:56,705 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+18:59:56,706 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+18:59:56,707 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+18:59:56,708 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+18:59:56,709 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+18:59:56,710 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+19:00:09,043 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+19:00:09,061 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+19:00:09,066 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+19:00:09,068 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+19:00:09,068 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+19:00:09,070 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+19:00:09,071 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+19:00:09,077 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+19:00:47,705 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+19:00:47,724 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+19:00:47,728 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+19:00:47,729 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+19:00:47,730 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+19:00:47,731 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+19:00:47,733 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+19:00:47,733 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+19:01:43,891 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+19:01:43,908 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+19:01:43,912 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+19:01:43,913 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+19:01:43,914 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+19:01:43,915 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+19:01:43,916 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+19:01:43,916 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+19:03:13,535 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+19:03:13,552 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+19:03:13,557 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+19:03:13,558 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+19:03:13,559 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+19:03:13,760 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+19:03:13,762 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+19:03:13,762 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+19:04:03,478 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+19:04:03,496 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+19:04:03,501 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+19:04:03,502 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+19:04:03,503 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+19:04:42,145 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+19:04:46,543 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+19:04:46,544 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+19:05:12,600 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+19:05:12,617 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+19:05:12,621 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+19:05:12,622 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+19:05:12,623 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+19:05:22,771 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+19:05:42,584 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+19:05:49,252 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+19:05:49,259 [12] ERROR UniversalRobotsConnect.RTDEReceiver (null) - Got a packet too small
+19:06:26,476 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+19:06:26,492 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+19:06:26,496 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+19:06:26,497 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+19:06:26,497 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+19:06:28,937 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+19:06:28,939 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+19:06:28,940 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+19:06:59,248 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+19:06:59,265 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+19:06:59,269 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+19:06:59,270 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+19:06:59,271 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+19:07:01,948 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+19:07:01,950 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+19:07:01,950 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+19:18:43,999 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+19:18:44,016 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+19:18:44,020 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+19:18:44,021 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+19:18:44,022 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+19:18:51,273 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+19:18:51,276 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+19:18:51,278 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+19:19:39,247 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+19:19:39,263 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+19:19:39,267 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+19:19:39,269 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+19:19:39,269 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+19:19:41,653 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+19:19:41,655 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+19:19:41,656 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+19:20:04,012 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+19:20:04,033 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+19:20:04,037 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+19:20:04,039 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+19:20:04,039 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+19:20:23,173 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+19:20:23,193 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+19:20:23,197 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+19:20:23,199 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+19:20:23,199 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+19:20:23,201 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+19:20:23,202 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+19:20:23,203 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+19:21:39,061 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+19:21:39,079 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+19:21:39,083 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+19:21:39,085 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+19:21:39,085 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+19:21:39,086 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+19:21:39,087 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+19:21:39,088 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+19:41:46,394 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+19:41:46,413 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+19:41:46,417 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+19:41:46,418 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+19:41:46,419 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+19:41:46,420 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+19:41:46,421 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+19:41:46,422 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+19:42:30,870 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+19:42:30,887 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+19:42:30,891 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+19:42:30,892 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+19:42:30,893 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+19:42:30,894 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+19:42:30,895 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+19:42:30,896 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+19:44:26,307 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+19:44:26,324 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+19:44:26,329 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+19:44:26,330 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+19:44:26,331 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+19:44:26,332 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+19:44:26,333 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+19:44:26,333 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+19:46:57,044 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+19:46:57,061 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+19:46:57,066 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+19:46:57,068 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+19:46:57,068 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+19:46:57,069 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+19:46:57,070 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+19:46:57,071 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+19:56:38,338 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+19:56:38,356 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+19:56:38,365 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+19:56:38,366 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+19:56:38,367 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+19:56:38,368 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+19:56:38,369 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+19:56:38,370 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+20:02:53,611 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+20:02:53,630 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+20:02:53,635 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+20:02:53,637 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+20:02:53,637 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+20:02:53,639 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+20:02:53,640 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+20:02:53,641 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+20:03:42,217 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+20:03:42,238 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+20:03:42,243 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+20:03:42,244 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+20:03:42,245 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+20:03:42,247 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+20:03:42,248 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+20:03:42,249 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+20:05:48,255 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+20:05:48,278 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+20:05:48,283 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+20:05:48,285 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+20:05:48,286 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+20:05:48,290 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+20:05:48,293 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+20:05:48,295 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+20:06:57,553 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+20:06:57,570 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+20:06:57,574 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+20:06:57,576 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+20:06:57,576 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+20:06:57,577 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+20:06:57,578 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+20:06:57,579 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+20:07:31,365 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+20:07:31,386 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+20:07:31,390 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+20:07:31,391 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+20:07:31,392 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+20:07:31,393 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+20:07:31,394 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+20:07:31,395 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+20:07:54,981 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+20:07:55,000 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+20:07:55,005 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+20:07:55,006 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+20:07:55,007 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+20:07:55,008 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+20:07:55,010 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+20:07:55,011 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+20:08:21,175 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+20:08:21,195 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+20:08:21,220 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+20:08:21,221 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+20:08:21,222 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+20:08:21,223 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+20:08:21,225 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+20:08:21,226 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+20:08:46,480 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+20:08:46,498 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+20:08:46,505 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+20:08:46,506 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+20:08:46,507 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+20:08:46,508 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+20:08:46,508 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+20:08:46,509 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+20:09:46,326 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+20:09:46,344 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+20:09:46,350 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+20:09:46,352 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+20:09:46,352 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+20:09:46,354 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+20:09:46,355 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+20:09:46,356 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+20:12:13,463 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+20:12:13,483 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+20:12:13,487 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+20:12:13,488 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+20:12:13,489 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+20:12:13,490 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+20:12:13,492 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+20:12:13,492 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+20:13:30,446 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+20:13:30,462 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+20:13:30,468 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+20:13:30,470 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+20:13:30,471 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+20:13:30,473 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+20:13:30,474 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+20:13:30,475 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+20:17:15,722 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+20:17:15,740 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+20:17:15,745 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+20:17:15,746 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+20:17:15,746 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+20:17:15,748 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+20:17:15,749 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+20:17:15,750 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+20:18:02,950 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+20:18:02,969 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+20:18:02,974 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+20:18:02,975 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+20:18:02,976 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+20:18:02,977 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+20:18:02,978 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+20:18:02,979 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+20:22:51,784 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+20:22:51,802 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+20:22:51,807 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+20:22:51,808 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+20:22:51,808 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+20:22:51,809 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+20:22:51,811 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+20:22:51,812 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+20:22:54,855 [8] DEBUG UniversalRobotsConnect.RobotController (null) - Send the first move_j
+20:23:43,006 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+20:23:43,026 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+20:23:43,053 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+20:23:43,054 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+20:23:43,054 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+20:23:43,055 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+20:23:43,056 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+20:23:43,057 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+20:23:47,896 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the first move_j
+20:23:52,897 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the second move_j
+20:23:57,897 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the third move_j
+20:24:02,899 [9] DEBUG UniversalRobotsConnect.RobotController (null) - This was the one to go home
+20:25:26,131 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+20:25:26,149 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+20:25:26,153 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+20:25:26,155 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+20:25:26,155 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+20:25:26,156 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+20:25:26,158 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+20:25:26,158 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+20:25:29,993 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the first move_j
+20:25:34,994 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the second move_j
+20:25:39,996 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the third move_j
+20:25:44,997 [9] DEBUG UniversalRobotsConnect.RobotController (null) - This was the one to go home
+20:25:52,199 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the first move_j
+20:25:52,200 [11] ERROR UniversalRobotsConnect.RTDEReceiver (null) - Got a packet too small
+20:25:57,201 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the second move_j
+20:26:02,202 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the third move_j
+20:26:07,205 [9] DEBUG UniversalRobotsConnect.RobotController (null) - This was the one to go home
+20:26:12,206 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the first move_j
+20:26:17,208 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the second move_j
+20:26:22,209 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the third move_j
+20:26:39,397 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+20:26:39,414 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+20:26:39,419 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+20:26:39,420 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+20:26:39,421 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+20:26:39,422 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+20:26:39,423 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+20:26:39,424 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+20:26:39,426 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the first move_j
+20:26:45,427 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the second move_j
+20:26:51,429 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the third move_j
+20:26:57,431 [9] DEBUG UniversalRobotsConnect.RobotController (null) - This was the one to go home
+20:27:03,432 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the first move_j
+20:27:06,710 [11] ERROR UniversalRobotsConnect.RTDEReceiver (null) - Got a packet too small
+20:27:09,433 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the second move_j
+20:27:15,435 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the third move_j
+20:27:21,437 [9] DEBUG UniversalRobotsConnect.RobotController (null) - This was the one to go home
+20:27:27,438 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the first move_j
+20:27:33,439 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the second move_j
+20:27:39,440 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the third move_j
+20:27:45,442 [9] DEBUG UniversalRobotsConnect.RobotController (null) - This was the one to go home
+20:27:51,443 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the first move_j
+20:27:57,444 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the second move_j
+20:28:03,445 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the third move_j
+20:28:09,446 [9] DEBUG UniversalRobotsConnect.RobotController (null) - This was the one to go home
+20:28:15,447 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the first move_j
+20:28:21,448 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the second move_j
+20:28:27,449 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the third move_j
+20:28:33,450 [9] DEBUG UniversalRobotsConnect.RobotController (null) - This was the one to go home
+20:28:39,452 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the first move_j
+20:28:42,341 [11] ERROR UniversalRobotsConnect.RTDEReceiver (null) - Got a packet too small
+20:28:45,453 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the second move_j
+20:28:51,454 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the third move_j
+20:28:57,456 [9] DEBUG UniversalRobotsConnect.RobotController (null) - This was the one to go home
+20:29:03,458 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the first move_j
+20:29:07,155 [11] ERROR UniversalRobotsConnect.RTDEReceiver (null) - Got a packet too small
+20:29:09,459 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the second move_j
+20:29:15,460 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the third move_j
+20:29:21,462 [9] DEBUG UniversalRobotsConnect.RobotController (null) - This was the one to go home
+20:29:27,463 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Send the first move_j
+20:29:29,916 [11] ERROR UniversalRobotsConnect.RTDEReceiver (null) - Got a packet too small
+21:09:36,827 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+21:09:36,846 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+21:09:36,851 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+21:09:36,852 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+21:09:36,852 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+21:09:36,854 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+21:09:36,855 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+21:09:36,856 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+21:09:36,858 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Instantiated
+21:09:36,859 [9] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand (null) - Instantiated
+21:09:36,859 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Executing
+21:09:57,388 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+21:09:57,405 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+21:09:57,410 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+21:09:57,411 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+21:09:57,411 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+21:09:57,412 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+21:09:57,414 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+21:09:57,414 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+21:09:57,417 [10] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Instantiated
+21:09:57,417 [10] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand (null) - Instantiated
+21:09:57,417 [10] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Executing
+21:10:07,420 [10] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand (null) - Executing
+21:11:40,686 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+21:11:40,707 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+21:11:40,711 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+21:11:40,712 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+21:11:40,712 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+21:11:40,713 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+21:11:40,714 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+21:11:40,715 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+21:11:40,717 [8] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Instantiated
+21:11:40,718 [8] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand (null) - Instantiated
+21:11:40,718 [8] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Executing
+21:11:50,722 [8] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand (null) - Executing
+21:18:07,868 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+21:18:07,885 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+21:18:07,897 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+21:18:07,898 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+21:18:07,899 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+21:18:07,900 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+21:18:07,901 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+21:18:07,902 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+21:18:07,905 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Instantiated
+21:18:07,906 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - Instantiated
+21:18:07,906 [9] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand (null) - Instantiated
+21:18:07,907 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Executing
+21:18:17,909 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - Executing
+21:18:17,909 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:18:19,410 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:18:20,911 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:18:22,412 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:18:23,913 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:18:25,414 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:18:26,914 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:18:28,415 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:18:29,915 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:18:31,417 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:18:32,919 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:18:34,419 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:18:35,921 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:18:37,423 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:18:39,702 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:18:41,202 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:18:42,703 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:18:44,204 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:18:45,705 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:18:47,207 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:18:48,901 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:18:50,402 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:18:51,903 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:18:53,403 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:19:35,584 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+21:19:35,604 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+21:19:35,609 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+21:19:35,610 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+21:19:35,611 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+21:19:35,612 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+21:19:35,613 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+21:19:35,614 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+21:19:35,617 [8] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Instantiated
+21:19:35,618 [8] DEBUG UniversalRobotsConnect.SandCommand (null) - Instantiated
+21:19:35,618 [8] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand (null) - Instantiated
+21:19:35,619 [8] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Executing
+21:19:45,625 [8] DEBUG UniversalRobotsConnect.SandCommand (null) - Executing
+21:19:45,625 [8] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:19:47,126 [8] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:19:48,628 [8] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:19:50,129 [8] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:19:51,630 [8] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:19:53,131 [8] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:19:54,632 [8] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:19:56,133 [8] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:19:57,635 [8] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:19:59,137 [8] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:20:00,638 [8] DEBUG UniversalRobotsConnect.SandCommand (null) - DONE SANDING
+21:20:00,638 [8] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand (null) - Executing
+21:20:03,493 [10] ERROR UniversalRobotsConnect.RTDEReceiver (null) - Got a packet too small
+21:20:21,208 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+21:20:21,224 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+21:20:21,229 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+21:20:21,230 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+21:20:21,230 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+21:20:21,231 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+21:20:21,232 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+21:20:21,233 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+21:20:21,235 [10] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Instantiated
+21:20:21,236 [10] DEBUG UniversalRobotsConnect.SandCommand (null) - Instantiated
+21:20:21,237 [10] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand (null) - Instantiated
+21:20:21,237 [10] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Executing
+21:20:28,062 [12] ERROR UniversalRobotsConnect.RTDEReceiver (null) - Got a packet too small
+21:20:31,239 [10] DEBUG UniversalRobotsConnect.SandCommand (null) - Executing
+21:20:31,239 [10] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:20:32,741 [10] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:20:34,242 [10] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:20:35,743 [10] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:20:37,244 [10] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:20:38,745 [10] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:20:40,246 [10] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:20:41,748 [10] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:20:43,249 [10] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:20:44,749 [10] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:20:46,250 [10] DEBUG UniversalRobotsConnect.SandCommand (null) - DONE SANDING
+21:20:46,250 [10] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand (null) - Executing
+21:45:56,289 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+21:45:56,309 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+21:45:56,314 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+21:45:56,315 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+21:45:56,315 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+21:45:56,316 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+21:45:56,317 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+21:45:56,318 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+21:45:56,320 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+21:45:56,321 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Instantiated
+21:45:56,321 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+21:45:56,321 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+21:45:56,322 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - Instantiated
+21:45:56,328 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+21:45:56,328 [9] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand (null) - Instantiated
+21:45:56,329 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Executing
+21:45:56,329 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Getting the Soaker tool
+21:46:01,331 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Getting the Soaker tool
+21:46:01,332 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Executing
+21:46:11,334 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Executing
+21:46:11,334 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Putting the Soaker tool
+21:46:16,335 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Putting the Soaker tool
+21:46:16,336 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Executing
+21:46:16,337 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Getting the Sander tool
+21:46:27,778 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+21:46:27,796 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+21:46:27,801 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+21:46:27,802 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+21:46:27,802 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+21:46:27,803 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+21:46:27,805 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+21:46:27,806 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+21:46:37,095 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+21:46:37,644 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Instantiated
+21:46:38,161 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+21:46:38,738 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+21:46:39,215 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - Instantiated
+21:46:39,810 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+21:46:40,328 [9] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand (null) - Instantiated
+21:46:49,384 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Executing
+21:46:49,385 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Getting the Soaker tool
+21:46:49,406 [11] ERROR UniversalRobotsConnect.RTDEReceiver (null) - Got a packet too small
+21:46:54,386 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Getting the Soaker tool
+21:47:02,069 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Executing
+21:47:06,581 [11] ERROR UniversalRobotsConnect.RTDEReceiver (null) - Got a packet too small
+21:47:23,929 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Executing
+21:47:23,930 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Putting the Soaker tool
+21:47:23,932 [11] ERROR UniversalRobotsConnect.RTDEReceiver (null) - Got a packet too small
+21:47:28,935 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Putting the Soaker tool
+21:48:28,206 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+21:48:28,224 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+21:48:28,228 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+21:48:28,229 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+21:48:28,230 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+21:48:28,231 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+21:48:28,232 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+21:48:28,233 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+21:48:28,235 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+21:48:28,236 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Instantiated
+21:48:28,236 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+21:48:28,236 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+21:48:28,237 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - Instantiated
+21:48:28,246 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+21:48:28,247 [9] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand (null) - Instantiated
+21:48:28,247 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Executing
+21:48:28,247 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Getting the Soaker tool
+21:48:48,475 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Executing
+21:48:48,479 [11] ERROR UniversalRobotsConnect.RTDEReceiver (null) - Got a packet too small
+21:48:58,478 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Executing
+21:48:58,478 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Putting the Soaker tool
+21:49:13,482 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Executing
+21:49:13,482 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Getting the Sander tool
+21:49:28,497 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - Executing
+21:49:28,497 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:49:29,998 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:49:31,498 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:49:32,999 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:49:34,499 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:49:36,001 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:49:37,501 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:49:39,002 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:49:40,503 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:51:49,222 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+21:51:49,242 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+21:51:49,247 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+21:51:49,249 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+21:51:49,249 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+21:51:49,251 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+21:51:49,252 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+21:51:49,253 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+21:51:49,256 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+21:51:49,257 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Instantiated
+21:51:49,257 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - Instantiated
+21:51:49,257 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+21:51:49,258 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+21:51:49,258 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Instantiated
+21:51:49,442 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - Instantiated
+21:51:49,442 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+21:51:49,443 [9] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand (null) - Instantiated
+21:51:49,443 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Executing
+21:51:49,444 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Getting the Soaker tool
+21:52:04,447 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Executing
+21:52:14,449 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - Executing
+21:52:14,450 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+21:52:15,951 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+21:52:17,452 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+21:52:18,953 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+21:52:20,453 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+21:52:21,954 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+21:52:23,455 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+21:52:24,957 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+21:52:26,457 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+21:52:27,960 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+21:52:29,461 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - DONE SOAKING
+21:52:29,461 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Executing
+21:52:29,461 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Putting the Soaker tool
+21:52:44,463 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Executing
+21:52:44,463 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Getting the Sander tool
+21:52:59,465 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Executing
+21:53:09,467 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - Executing
+21:53:09,467 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:53:10,968 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:53:12,470 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:53:13,970 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:53:15,472 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:53:16,973 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:53:18,473 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:53:19,974 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:53:21,476 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:53:22,977 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+21:53:24,477 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - DONE SANDING
+21:53:24,478 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Executing
+21:53:24,478 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Putting the Sander tool
+21:53:39,479 [9] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand (null) - Executing
+21:53:39,480 [9] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand (null) - WE ARE DONE .. GOING HOME
+21:53:49,482 [9] DEBUG UniversalRobotsConnect.RobotController (null) - NOW THE WHOLE PROGRAM IS DONE
+22:00:03,150 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+22:00:03,168 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+22:00:03,172 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+22:00:03,173 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+22:00:03,174 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+22:00:03,175 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+22:00:03,176 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+22:00:03,177 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+22:00:03,179 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+22:00:03,180 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Instantiated
+22:00:03,180 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - Instantiated
+22:00:03,180 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+22:00:03,180 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+22:00:03,181 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Instantiated
+22:00:03,368 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - Instantiated
+22:00:03,368 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+22:00:03,368 [9] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand (null) - Instantiated
+22:00:03,369 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Executing
+22:00:03,369 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Getting the Soaker tool
+22:00:18,371 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Executing
+22:00:21,832 [11] ERROR UniversalRobotsConnect.RTDEReceiver (null) - Got a packet too small
+22:00:28,374 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - Executing
+22:00:28,374 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+22:00:29,875 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+22:00:31,376 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+22:00:32,877 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+22:00:34,378 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+22:00:35,880 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+22:00:37,381 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+22:00:38,883 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+22:00:40,383 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+22:00:41,884 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+22:00:43,384 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - DONE SOAKING
+22:00:43,384 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Executing
+22:00:43,385 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Putting the Soaker tool
+22:00:46,857 [11] ERROR UniversalRobotsConnect.RTDEReceiver (null) - Got a packet too small
+22:00:58,387 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Executing
+22:00:58,387 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Getting the Sander tool
+22:01:13,390 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Executing
+22:01:23,392 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - Executing
+22:01:23,392 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+22:01:24,893 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+22:01:26,394 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+22:01:27,895 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+22:01:29,396 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+22:01:30,897 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+22:01:32,398 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+22:01:33,899 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+22:01:35,400 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+22:01:36,901 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+22:01:38,401 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - DONE SANDING
+22:01:38,402 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Executing
+22:01:38,402 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Putting the Sander tool
+22:01:53,405 [9] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand (null) - Executing
+22:01:53,405 [9] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand (null) - WE ARE DONE .. GOING HOME
+22:02:03,406 [9] DEBUG UniversalRobotsConnect.RobotController (null) - NOW THE WHOLE PROGRAM IS DONE
+22:02:53,207 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+22:02:53,225 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+22:02:53,229 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+22:02:53,230 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+22:02:53,231 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+22:02:53,232 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+22:02:53,233 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+22:02:53,234 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+22:02:53,236 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+22:02:53,237 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Instantiated
+22:02:53,237 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - Instantiated
+22:02:53,237 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+22:02:53,238 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+22:02:53,238 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Instantiated
+22:02:53,425 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - Instantiated
+22:02:53,425 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+22:02:53,426 [9] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand (null) - Instantiated
+22:02:53,426 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Executing
+22:02:53,426 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Getting the Soaker tool
+22:03:08,428 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Executing
+22:03:11,987 [11] ERROR UniversalRobotsConnect.RTDEReceiver (null) - Got a packet too small
+22:03:18,429 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - Executing
+22:03:18,429 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+22:03:19,930 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+22:03:21,430 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+22:03:22,931 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+22:03:24,432 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+22:03:25,933 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+22:03:27,434 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+22:03:28,935 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+22:03:30,436 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+22:03:31,936 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+22:03:33,438 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - DONE SOAKING
+22:03:33,438 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Executing
+22:03:33,438 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Putting the Soaker tool
+22:03:48,442 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Executing
+22:03:48,442 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Getting the Sander tool
+22:04:03,443 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Executing
+22:04:13,445 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - Executing
+22:04:13,445 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+22:04:14,947 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+22:04:16,447 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+22:04:17,948 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA LIKE CRAZY
+22:05:18,313 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+22:05:18,332 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+22:05:18,343 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+22:05:18,344 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+22:05:18,344 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+22:05:18,345 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+22:05:18,346 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+22:05:18,347 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+22:05:18,350 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+22:05:18,351 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Instantiated
+22:05:18,352 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - Instantiated
+22:05:18,352 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+22:05:18,352 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+22:05:18,352 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Instantiated
+22:05:18,352 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - Instantiated
+22:05:18,352 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+22:05:18,353 [9] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand (null) - Instantiated
+22:05:18,353 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Getting the Soaker tool
+22:05:33,356 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - MOVING TO WORK AREA
+22:05:43,359 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+22:05:44,861 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+22:05:46,361 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+22:05:47,862 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+22:05:49,363 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+22:05:50,864 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+22:05:52,365 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+22:05:53,866 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+22:05:55,367 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+22:05:56,868 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA LIKE CRAZY
+22:05:58,369 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - DONE SOAKING
+22:05:58,369 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Putting the Soaker tool
+22:07:03,724 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+22:07:03,752 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+22:07:03,765 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+22:07:03,766 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+22:07:03,767 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+22:07:03,769 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+22:07:03,772 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+22:07:03,773 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+22:07:03,776 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+22:07:03,777 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Instantiated
+22:07:03,778 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - Instantiated
+22:07:03,778 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+22:07:03,778 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+22:07:03,778 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Instantiated
+22:07:03,779 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - Instantiated
+22:07:03,786 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+22:07:03,789 [9] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand (null) - Instantiated
+22:07:03,789 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Getting the Soaker tool
+22:07:25,342 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+22:07:25,361 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+22:07:25,366 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+22:07:25,367 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+22:07:25,368 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+22:07:25,369 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+22:07:25,370 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+22:07:25,371 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+22:07:25,375 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+22:07:25,376 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Instantiated
+22:07:25,376 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - Instantiated
+22:07:25,377 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+22:07:25,377 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+22:07:25,377 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Instantiated
+22:07:25,378 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - Instantiated
+22:07:25,378 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+22:07:25,378 [9] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand (null) - Instantiated
+22:07:25,379 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Getting the Soaker tool
+22:07:40,383 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - MOVING TO WORK AREA
+22:07:50,387 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA
+22:07:51,889 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA
+22:07:53,390 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA
+22:07:54,890 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA
+22:07:56,391 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA
+22:07:57,891 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA
+22:07:59,392 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA
+22:08:00,905 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA
+22:08:02,406 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA
+22:08:03,907 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - I AM SOAKING THE AREA
+22:08:05,411 [9] DEBUG UniversalRobotsConnect.SoakCommand (null) - DONE SOAKING
+22:08:05,412 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Putting the Soaker tool
+22:08:07,848 [11] ERROR UniversalRobotsConnect.RTDEReceiver (null) - Got a packet too small
+22:08:20,414 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Getting the Sander tool
+22:08:35,417 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - MOVING TO WORK AREA
+22:08:45,420 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA
+22:08:46,922 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA
+22:08:48,423 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA
+22:08:49,924 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA
+22:08:51,425 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA
+22:08:52,926 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA
+22:08:54,427 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA
+22:08:55,928 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA
+22:08:57,429 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA
+22:08:58,929 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - I AM SANDING THE AREA
+22:09:00,431 [9] DEBUG UniversalRobotsConnect.SandCommand (null) - DONE SANDING
+22:09:00,431 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Putting the Sander tool
+22:09:15,434 [9] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand (null) - WE ARE DONE .. GOING HOME
+22:09:22,919 [11] ERROR UniversalRobotsConnect.RTDEReceiver (null) - Got a packet too small
+22:09:25,437 [9] DEBUG UniversalRobotsConnect.RobotController (null) - NOW THE WHOLE PROGRAM IS DONE
+22:12:03,484 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+22:12:03,502 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+22:12:03,516 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+22:12:03,517 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+22:12:03,518 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+22:12:03,519 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+22:12:03,520 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+22:12:03,520 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+22:12:03,523 [8] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+22:12:03,523 [8] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Instantiated
+22:12:03,524 [8] DEBUG UniversalRobotsConnect.SoakCommand (null) - Instantiated
+22:12:03,524 [8] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+22:12:03,524 [8] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+22:12:03,524 [8] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - Instantiated
+22:12:03,525 [8] DEBUG UniversalRobotsConnect.SandCommand (null) - Instantiated
+22:12:03,525 [8] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - Instantiated
+22:12:03,723 [8] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand (null) - Instantiated
+22:12:03,724 [8] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Getting the Soaker tool
+22:12:18,735 [8] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - MOVING TO WORK AREA
+22:12:28,737 [8] DEBUG UniversalRobotsConnect.SoakCommand (null) - I am soaking the 3D surface they gave me - at a given distance
+22:12:30,238 [8] DEBUG UniversalRobotsConnect.SoakCommand (null) - I am soaking the 3D surface they gave me - at a given distance
+22:12:31,739 [8] DEBUG UniversalRobotsConnect.SoakCommand (null) - I am soaking the 3D surface they gave me - at a given distance
+22:12:33,240 [8] DEBUG UniversalRobotsConnect.SoakCommand (null) - I am soaking the 3D surface they gave me - at a given distance
+22:12:34,741 [8] DEBUG UniversalRobotsConnect.SoakCommand (null) - I am soaking the 3D surface they gave me - at a given distance
+22:12:36,242 [8] DEBUG UniversalRobotsConnect.SoakCommand (null) - I am soaking the 3D surface they gave me - at a given distance
+22:12:37,743 [8] DEBUG UniversalRobotsConnect.SoakCommand (null) - I am soaking the 3D surface they gave me - at a given distance
+22:12:39,243 [8] DEBUG UniversalRobotsConnect.SoakCommand (null) - I am soaking the 3D surface they gave me - at a given distance
+22:12:40,745 [8] DEBUG UniversalRobotsConnect.SoakCommand (null) - I am soaking the 3D surface they gave me - at a given distance
+22:12:42,247 [8] DEBUG UniversalRobotsConnect.SoakCommand (null) - I am soaking the 3D surface they gave me - at a given distance
+22:12:43,748 [8] DEBUG UniversalRobotsConnect.SoakCommand (null) - DONE SOAKING
+22:12:43,748 [8] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Putting the Soaker tool
+22:12:58,753 [8] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Getting the Sander tool
+22:13:13,755 [8] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand (null) - MOVING TO WORK AREA
+22:13:23,757 [8] DEBUG UniversalRobotsConnect.SandCommand (null) - I am sanding the 3D surface they gave me - with a force
+22:13:25,258 [8] DEBUG UniversalRobotsConnect.SandCommand (null) - I am sanding the 3D surface they gave me - with a force
+22:13:26,758 [8] DEBUG UniversalRobotsConnect.SandCommand (null) - I am sanding the 3D surface they gave me - with a force
+22:13:28,259 [8] DEBUG UniversalRobotsConnect.SandCommand (null) - I am sanding the 3D surface they gave me - with a force
+22:13:29,760 [8] DEBUG UniversalRobotsConnect.SandCommand (null) - I am sanding the 3D surface they gave me - with a force
+22:13:31,260 [8] DEBUG UniversalRobotsConnect.SandCommand (null) - I am sanding the 3D surface they gave me - with a force
+22:13:32,761 [8] DEBUG UniversalRobotsConnect.SandCommand (null) - I am sanding the 3D surface they gave me - with a force
+22:13:34,262 [8] DEBUG UniversalRobotsConnect.SandCommand (null) - I am sanding the 3D surface they gave me - with a force
+22:13:35,763 [8] DEBUG UniversalRobotsConnect.SandCommand (null) - I am sanding the 3D surface they gave me - with a force
+22:13:37,264 [8] DEBUG UniversalRobotsConnect.SandCommand (null) - I am sanding the 3D surface they gave me - with a force
+22:13:38,764 [8] DEBUG UniversalRobotsConnect.SandCommand (null) - DONE SANDING
+22:13:38,764 [8] DEBUG UniversalRobotsConnect.ChangeToolCommand (null) - I am Putting the Sander tool
+22:13:53,766 [8] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand (null) - WE ARE DONE .. GOING HOME
+22:14:03,770 [8] DEBUG UniversalRobotsConnect.RobotController (null) - NOW THE WHOLE PROGRAM IS DONE
+22:15:50,741 [8] DEBUG UniversalRobotsConnect.RobotConnector - Started Logging
+22:15:50,749 [8] DEBUG UniversalRobotsConnect.RobotConnector - Started Robot Model
+22:15:50,755 [8] DEBUG UniversalRobotsConnect.RTDE - Get Controller Version from Robot
+22:15:50,756 [8] DEBUG UniversalRobotsConnect.RTDE - Negotiate Protocol Version with Robot
+22:15:50,756 [8] DEBUG UniversalRobotsConnect.RTDE - Setting up RTDE Interface
+22:15:50,757 [8] DEBUG UniversalRobotsConnect.RTDE - Starting RTDE Interface
+22:15:50,757 [8] DEBUG UniversalRobotsConnect.RealTimeClient - Starting RealtimeClientReceiver
+22:15:50,758 [8] DEBUG UniversalRobotsConnect.RealTimeClient - Starting RealtimeClientSender
+22:15:50,760 [8] DEBUG UniversalRobotsConnect.ChangeToolCommand - Instantiated
+22:15:50,760 [8] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand - Instantiated
+22:15:50,761 [8] DEBUG UniversalRobotsConnect.SoakCommand - Instantiated
+22:15:50,761 [8] DEBUG UniversalRobotsConnect.ChangeToolCommand - Instantiated
+22:15:50,761 [8] DEBUG UniversalRobotsConnect.ChangeToolCommand - Instantiated
+22:15:50,761 [8] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand - Instantiated
+22:15:50,761 [8] DEBUG UniversalRobotsConnect.SandCommand - Instantiated
+22:15:50,761 [8] DEBUG UniversalRobotsConnect.ChangeToolCommand - Instantiated
+22:15:50,951 [8] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand - Instantiated
+22:15:50,951 [8] DEBUG UniversalRobotsConnect.ChangeToolCommand - I am Getting the Soaker tool
+22:15:58,832 [10] ERROR UniversalRobotsConnect.RTDEReceiver - Got a packet too small
+22:16:05,956 [8] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand - MOVING TO WORK AREA
+22:16:22,449 [10] DEBUG UniversalRobotsConnect.RobotConnector - Started Logging
+22:16:22,457 [10] DEBUG UniversalRobotsConnect.RobotConnector - Started Robot Model
+22:16:22,464 [10] DEBUG UniversalRobotsConnect.RTDE - Get Controller Version from Robot
+22:16:22,465 [10] DEBUG UniversalRobotsConnect.RTDE - Negotiate Protocol Version with Robot
+22:16:22,465 [10] DEBUG UniversalRobotsConnect.RTDE - Setting up RTDE Interface
+22:16:22,466 [10] DEBUG UniversalRobotsConnect.RTDE - Starting RTDE Interface
+22:16:22,467 [10] DEBUG UniversalRobotsConnect.RealTimeClient - Starting RealtimeClientReceiver
+22:16:22,468 [10] DEBUG UniversalRobotsConnect.RealTimeClient - Starting RealtimeClientSender
+22:16:22,470 [10] DEBUG UniversalRobotsConnect.ChangeToolCommand - Instantiated
+22:16:22,470 [10] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand - Instantiated
+22:16:22,471 [10] DEBUG UniversalRobotsConnect.SoakCommand - Instantiated
+22:16:22,471 [10] DEBUG UniversalRobotsConnect.ChangeToolCommand - Instantiated
+22:16:22,471 [10] DEBUG UniversalRobotsConnect.ChangeToolCommand - Instantiated
+22:16:22,471 [10] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand - Instantiated
+22:16:22,471 [10] DEBUG UniversalRobotsConnect.SandCommand - Instantiated
+22:16:22,656 [10] DEBUG UniversalRobotsConnect.ChangeToolCommand - Instantiated
+22:16:22,656 [10] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand - Instantiated
+22:16:22,656 [10] DEBUG UniversalRobotsConnect.ChangeToolCommand - I am Getting the Soaker tool
+22:16:36,101 [8] DEBUG UniversalRobotsConnect.RobotConnector - Started Logging
+22:16:36,108 [8] DEBUG UniversalRobotsConnect.RobotConnector - Started Robot Model
+22:16:36,115 [8] DEBUG UniversalRobotsConnect.RTDE - Get Controller Version from Robot
+22:16:36,116 [8] DEBUG UniversalRobotsConnect.RTDE - Negotiate Protocol Version with Robot
+22:16:36,116 [8] DEBUG UniversalRobotsConnect.RTDE - Setting up RTDE Interface
+22:16:36,117 [8] DEBUG UniversalRobotsConnect.RTDE - Starting RTDE Interface
+22:16:36,121 [8] DEBUG UniversalRobotsConnect.RealTimeClient - Starting RealtimeClientReceiver
+22:16:36,128 [8] DEBUG UniversalRobotsConnect.RealTimeClient - Starting RealtimeClientSender
+22:16:36,133 [8] DEBUG UniversalRobotsConnect.ChangeToolCommand - Instantiated
+22:16:36,134 [8] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand - Instantiated
+22:16:36,134 [8] DEBUG UniversalRobotsConnect.SoakCommand - Instantiated
+22:16:36,134 [8] DEBUG UniversalRobotsConnect.ChangeToolCommand - Instantiated
+22:16:36,134 [8] DEBUG UniversalRobotsConnect.ChangeToolCommand - Instantiated
+22:16:36,134 [8] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand - Instantiated
+22:16:36,135 [8] DEBUG UniversalRobotsConnect.SandCommand - Instantiated
+22:16:36,135 [8] DEBUG UniversalRobotsConnect.ChangeToolCommand - Instantiated
+22:16:36,135 [8] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand - Instantiated
+22:16:36,135 [8] DEBUG UniversalRobotsConnect.ChangeToolCommand - I am Getting the Soaker tool
+22:16:43,352 [9] DEBUG UniversalRobotsConnect.RobotConnector - Started Logging
+22:16:43,359 [9] DEBUG UniversalRobotsConnect.RobotConnector - Started Robot Model
+22:16:43,366 [9] DEBUG UniversalRobotsConnect.RTDE - Get Controller Version from Robot
+22:16:43,367 [9] DEBUG UniversalRobotsConnect.RTDE - Negotiate Protocol Version with Robot
+22:16:43,367 [9] DEBUG UniversalRobotsConnect.RTDE - Setting up RTDE Interface
+22:16:43,368 [9] DEBUG UniversalRobotsConnect.RTDE - Starting RTDE Interface
+22:16:43,369 [9] DEBUG UniversalRobotsConnect.RealTimeClient - Starting RealtimeClientReceiver
+22:16:43,369 [9] DEBUG UniversalRobotsConnect.RealTimeClient - Starting RealtimeClientSender
+22:16:43,372 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand - Instantiated
+22:16:43,372 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand - Instantiated
+22:16:43,372 [9] DEBUG UniversalRobotsConnect.SoakCommand - Instantiated
+22:16:43,372 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand - Instantiated
+22:16:43,372 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand - Instantiated
+22:16:43,372 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand - Instantiated
+22:16:43,374 [9] DEBUG UniversalRobotsConnect.SandCommand - Instantiated
+22:16:43,374 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand - Instantiated
+22:16:43,374 [9] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand - Instantiated
+22:16:43,374 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand - I am Getting the Soaker tool
+22:17:01,761 [10] DEBUG UniversalRobotsConnect.RobotConnector - Started Logging
+22:17:01,771 [10] DEBUG UniversalRobotsConnect.RobotConnector - Started Robot Model
+22:17:01,782 [10] DEBUG UniversalRobotsConnect.RTDE - Get Controller Version from Robot
+22:17:01,783 [10] DEBUG UniversalRobotsConnect.RTDE - Negotiate Protocol Version with Robot
+22:17:01,783 [10] DEBUG UniversalRobotsConnect.RTDE - Setting up RTDE Interface
+22:17:01,789 [10] DEBUG UniversalRobotsConnect.RTDE - Starting RTDE Interface
+22:17:01,790 [10] DEBUG UniversalRobotsConnect.RealTimeClient - Starting RealtimeClientReceiver
+22:17:01,791 [10] DEBUG UniversalRobotsConnect.RealTimeClient - Starting RealtimeClientSender
+22:17:01,793 [10] DEBUG UniversalRobotsConnect.ChangeToolCommand - Instantiated
+22:17:01,793 [10] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand - Instantiated
+22:17:01,793 [10] DEBUG UniversalRobotsConnect.SoakCommand - Instantiated
+22:17:01,793 [10] DEBUG UniversalRobotsConnect.ChangeToolCommand - Instantiated
+22:17:01,793 [10] DEBUG UniversalRobotsConnect.ChangeToolCommand - Instantiated
+22:17:01,793 [10] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand - Instantiated
+22:17:01,793 [10] DEBUG UniversalRobotsConnect.SandCommand - Instantiated
+22:17:01,793 [10] DEBUG UniversalRobotsConnect.ChangeToolCommand - Instantiated
+22:17:01,982 [10] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand - Instantiated
+22:17:01,982 [10] DEBUG UniversalRobotsConnect.ChangeToolCommand - I am Getting the Soaker tool
+22:17:16,983 [10] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand - MOVING TO WORK AREA
+22:17:26,985 [10] DEBUG UniversalRobotsConnect.SoakCommand - I am soaking the 3D surface they gave me - at a given distance
+22:17:28,485 [10] DEBUG UniversalRobotsConnect.SoakCommand - I am soaking the 3D surface they gave me - at a given distance
+22:17:29,986 [10] DEBUG UniversalRobotsConnect.SoakCommand - I am soaking the 3D surface they gave me - at a given distance
+22:17:31,487 [10] DEBUG UniversalRobotsConnect.SoakCommand - I am soaking the 3D surface they gave me - at a given distance
+22:17:32,987 [10] DEBUG UniversalRobotsConnect.SoakCommand - I am soaking the 3D surface they gave me - at a given distance
+22:17:34,488 [10] DEBUG UniversalRobotsConnect.SoakCommand - I am soaking the 3D surface they gave me - at a given distance
+22:17:35,989 [10] DEBUG UniversalRobotsConnect.SoakCommand - I am soaking the 3D surface they gave me - at a given distance
+22:17:37,489 [10] DEBUG UniversalRobotsConnect.SoakCommand - I am soaking the 3D surface they gave me - at a given distance
+22:17:38,990 [10] DEBUG UniversalRobotsConnect.SoakCommand - I am soaking the 3D surface they gave me - at a given distance
+22:17:40,491 [10] DEBUG UniversalRobotsConnect.SoakCommand - I am soaking the 3D surface they gave me - at a given distance
+22:17:41,991 [10] DEBUG UniversalRobotsConnect.SoakCommand - DONE SOAKING
+22:17:41,991 [10] DEBUG UniversalRobotsConnect.ChangeToolCommand - I am Putting the Soaker tool
+22:17:45,591 [12] ERROR UniversalRobotsConnect.RTDEReceiver - Got a packet too small
+22:17:56,993 [10] DEBUG UniversalRobotsConnect.ChangeToolCommand - I am Getting the Sander tool
+22:18:11,995 [10] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand - MOVING TO WORK AREA
+22:18:21,996 [10] DEBUG UniversalRobotsConnect.SandCommand - I am sanding the 3D surface they gave me - with a force
+22:18:23,497 [10] DEBUG UniversalRobotsConnect.SandCommand - I am sanding the 3D surface they gave me - with a force
+22:18:24,998 [10] DEBUG UniversalRobotsConnect.SandCommand - I am sanding the 3D surface they gave me - with a force
+22:18:26,499 [10] DEBUG UniversalRobotsConnect.SandCommand - I am sanding the 3D surface they gave me - with a force
+22:18:28,000 [10] DEBUG UniversalRobotsConnect.SandCommand - I am sanding the 3D surface they gave me - with a force
+22:18:29,501 [10] DEBUG UniversalRobotsConnect.SandCommand - I am sanding the 3D surface they gave me - with a force
+22:18:31,002 [10] DEBUG UniversalRobotsConnect.SandCommand - I am sanding the 3D surface they gave me - with a force
+22:18:32,503 [10] DEBUG UniversalRobotsConnect.SandCommand - I am sanding the 3D surface they gave me - with a force
+22:18:34,003 [10] DEBUG UniversalRobotsConnect.SandCommand - I am sanding the 3D surface they gave me - with a force
+22:18:35,504 [10] DEBUG UniversalRobotsConnect.SandCommand - I am sanding the 3D surface they gave me - with a force
+22:18:37,005 [10] DEBUG UniversalRobotsConnect.SandCommand - DONE SANDING
+22:18:37,005 [10] DEBUG UniversalRobotsConnect.ChangeToolCommand - I am Putting the Sander tool
+22:18:52,007 [10] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand - WE ARE DONE .. GOING HOME
+22:20:53,039 [9] DEBUG UniversalRobotsConnect.RobotConnector - Started Logging
+22:20:53,049 [9] DEBUG UniversalRobotsConnect.RobotConnector - Started Robot Model
+22:20:53,056 [9] DEBUG UniversalRobotsConnect.RTDE - Get Controller Version from Robot
+22:20:53,057 [9] DEBUG UniversalRobotsConnect.RTDE - Negotiate Protocol Version with Robot
+22:20:53,058 [9] DEBUG UniversalRobotsConnect.RTDE - Setting up RTDE Interface
+22:20:53,059 [9] DEBUG UniversalRobotsConnect.RTDE - Starting RTDE Interface
+22:20:53,060 [9] DEBUG UniversalRobotsConnect.RealTimeClient - Starting RealtimeClientReceiver
+22:20:53,061 [9] DEBUG UniversalRobotsConnect.RealTimeClient - Starting RealtimeClientSender
+22:20:53,064 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand - Instantiated
+22:20:53,065 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand - Instantiated
+22:20:53,065 [9] DEBUG UniversalRobotsConnect.SoakCommand - Instantiated
+22:20:53,065 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand - Instantiated
+22:20:53,065 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand - Instantiated
+22:20:53,065 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand - Instantiated
+22:20:53,065 [9] DEBUG UniversalRobotsConnect.SandCommand - Instantiated
+22:20:53,066 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand - Instantiated
+22:20:53,251 [9] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand - Instantiated
+22:20:53,251 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand - I am Getting the Soaker tool
+22:21:08,253 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand - MOVING TO WORK AREA
+22:21:18,254 [9] DEBUG UniversalRobotsConnect.SoakCommand - I am soaking the 3D surface they gave me - at a given distance
+22:21:19,756 [9] DEBUG UniversalRobotsConnect.SoakCommand - I am soaking the 3D surface they gave me - at a given distance
+22:21:21,256 [9] DEBUG UniversalRobotsConnect.SoakCommand - I am soaking the 3D surface they gave me - at a given distance
+22:21:22,757 [9] DEBUG UniversalRobotsConnect.SoakCommand - I am soaking the 3D surface they gave me - at a given distance
+22:21:24,259 [9] DEBUG UniversalRobotsConnect.SoakCommand - I am soaking the 3D surface they gave me - at a given distance
+22:21:25,759 [9] DEBUG UniversalRobotsConnect.SoakCommand - I am soaking the 3D surface they gave me - at a given distance
+22:21:27,260 [9] DEBUG UniversalRobotsConnect.SoakCommand - I am soaking the 3D surface they gave me - at a given distance
+22:21:28,761 [9] DEBUG UniversalRobotsConnect.SoakCommand - I am soaking the 3D surface they gave me - at a given distance
+22:21:30,262 [9] DEBUG UniversalRobotsConnect.SoakCommand - I am soaking the 3D surface they gave me - at a given distance
+22:21:31,763 [9] DEBUG UniversalRobotsConnect.SoakCommand - I am soaking the 3D surface they gave me - at a given distance
+22:21:33,264 [9] DEBUG UniversalRobotsConnect.SoakCommand - DONE SOAKING
+22:21:33,264 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand - I am Putting the Soaker tool
+22:21:48,265 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand - I am Getting the Sander tool
+22:22:03,266 [9] DEBUG UniversalRobotsConnect.MoveToWorkAreaCommand - MOVING TO WORK AREA
+22:22:13,266 [9] DEBUG UniversalRobotsConnect.SandCommand - I am sanding the 3D surface they gave me - with a force
+22:22:14,767 [9] DEBUG UniversalRobotsConnect.SandCommand - I am sanding the 3D surface they gave me - with a force
+22:22:16,270 [9] DEBUG UniversalRobotsConnect.SandCommand - I am sanding the 3D surface they gave me - with a force
+22:22:17,771 [9] DEBUG UniversalRobotsConnect.SandCommand - I am sanding the 3D surface they gave me - with a force
+22:22:19,273 [9] DEBUG UniversalRobotsConnect.SandCommand - I am sanding the 3D surface they gave me - with a force
+22:22:20,773 [9] DEBUG UniversalRobotsConnect.SandCommand - I am sanding the 3D surface they gave me - with a force
+22:22:22,274 [9] DEBUG UniversalRobotsConnect.SandCommand - I am sanding the 3D surface they gave me - with a force
+22:22:23,775 [9] DEBUG UniversalRobotsConnect.SandCommand - I am sanding the 3D surface they gave me - with a force
+22:22:25,276 [9] DEBUG UniversalRobotsConnect.SandCommand - I am sanding the 3D surface they gave me - with a force
+22:22:26,777 [9] DEBUG UniversalRobotsConnect.SandCommand - I am sanding the 3D surface they gave me - with a force
+22:22:28,277 [9] DEBUG UniversalRobotsConnect.SandCommand - DONE SANDING
+22:22:28,277 [9] DEBUG UniversalRobotsConnect.ChangeToolCommand - I am Putting the Sander tool
+22:22:43,279 [9] DEBUG UniversalRobotsConnect.MoveToHomePositionCommand - WE ARE DONE .. GOING HOME
+22:22:53,279 [9] DEBUG UniversalRobotsConnect.RobotController - NOW THE WHOLE PROGRAM IS DONE

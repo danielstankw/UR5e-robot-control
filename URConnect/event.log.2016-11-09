@@ -1,0 +1,173 @@
+59 [8] DEBUG RobotServer.RobotController (null) - Started Logging
+79 [8] DEBUG RobotServer.RobotController (null) - Started Robot Model
+83 [8] DEBUG RobotServer.RTDE (null) - Get Controller Version from Robot
+84 [8] DEBUG RobotServer.RTDE (null) - Negotiate Protocol Version with Robot
+85 [8] DEBUG RobotServer.RTDE (null) - Setting up RTDE Interface
+86 [8] DEBUG RobotServer.RTDE (null) - Starting RTDE Interface
+88 [8] DEBUG RobotServer.RealTimeClient (null) - Starting RealtimeClientReceiver
+89 [8] DEBUG RobotServer.RealTimeClient (null) - Starting RealtimeClientSender
+58 [9] DEBUG RobotServer.RobotController (null) - Started Logging
+75 [9] DEBUG RobotServer.RobotController (null) - Started Robot Model
+81 [9] DEBUG RobotServer.RTDE (null) - Get Controller Version from Robot
+82 [9] DEBUG RobotServer.RTDE (null) - Negotiate Protocol Version with Robot
+83 [9] DEBUG RobotServer.RTDE (null) - Setting up RTDE Interface
+83 [9] DEBUG RobotServer.RTDE (null) - Starting RTDE Interface
+84 [9] DEBUG RobotServer.RealTimeClient (null) - Starting RealtimeClientReceiver
+85 [9] DEBUG RobotServer.RealTimeClient (null) - Starting RealtimeClientSender
+63 [10] DEBUG RobotServer.RobotController (null) - Started Logging
+77 [10] DEBUG RobotServer.RobotController (null) - Started Robot Model
+85 [10] DEBUG RobotServer.RTDE (null) - Get Controller Version from Robot
+87 [10] DEBUG RobotServer.RTDE (null) - Negotiate Protocol Version with Robot
+88 [10] DEBUG RobotServer.RTDE (null) - Setting up RTDE Interface
+88 [10] DEBUG RobotServer.RTDE (null) - Starting RTDE Interface
+89 [10] DEBUG RobotServer.RealTimeClient (null) - Starting RealtimeClientReceiver
+90 [10] DEBUG RobotServer.RealTimeClient (null) - Starting RealtimeClientSender
+64 [9] DEBUG RobotServer.RobotController (null) - Started Logging
+83 [9] DEBUG RobotServer.RobotController (null) - Started Robot Model
+106 [9] DEBUG RobotServer.RTDE (null) - Get Controller Version from Robot
+107 [9] DEBUG RobotServer.RTDE (null) - Negotiate Protocol Version with Robot
+107 [9] DEBUG RobotServer.RTDE (null) - Setting up RTDE Interface
+108 [9] DEBUG RobotServer.RTDE (null) - Starting RTDE Interface
+109 [9] DEBUG RobotServer.RealTimeClient (null) - Starting RealtimeClientReceiver
+109 [9] DEBUG RobotServer.RealTimeClient (null) - Starting RealtimeClientSender
+63 [8] DEBUG RobotServer.RobotController (null) - Started Logging
+83 [8] DEBUG RobotServer.RobotController (null) - Started Robot Model
+87 [8] DEBUG RobotServer.RTDE (null) - Get Controller Version from Robot
+88 [8] DEBUG RobotServer.RTDE (null) - Negotiate Protocol Version with Robot
+88 [8] DEBUG RobotServer.RTDE (null) - Setting up RTDE Interface
+89 [8] DEBUG RobotServer.RTDE (null) - Starting RTDE Interface
+90 [8] DEBUG RobotServer.RealTimeClient (null) - Starting RealtimeClientReceiver
+90 [8] DEBUG RobotServer.RealTimeClient (null) - Starting RealtimeClientSender
+60 [9] DEBUG RobotServer.RobotController (null) - Started Logging
+76 [9] DEBUG RobotServer.RobotController (null) - Started Robot Model
+81 [9] DEBUG RobotServer.RTDE (null) - Get Controller Version from Robot
+82 [9] DEBUG RobotServer.RTDE (null) - Negotiate Protocol Version with Robot
+83 [9] DEBUG RobotServer.RTDE (null) - Setting up RTDE Interface
+83 [9] DEBUG RobotServer.RTDE (null) - Starting RTDE Interface
+85 [9] DEBUG RobotServer.RealTimeClient (null) - Starting RealtimeClientReceiver
+85 [9] DEBUG RobotServer.RealTimeClient (null) - Starting RealtimeClientSender
+21:40:50,004 [9] DEBUG RobotServer.RobotController (null) - Started Logging
+21:40:50,026 [9] DEBUG RobotServer.RobotController (null) - Started Robot Model
+21:40:50,030 [9] DEBUG RobotServer.RTDE (null) - Get Controller Version from Robot
+21:40:50,031 [9] DEBUG RobotServer.RTDE (null) - Negotiate Protocol Version with Robot
+21:40:50,032 [9] DEBUG RobotServer.RTDE (null) - Setting up RTDE Interface
+21:40:50,036 [9] DEBUG RobotServer.RTDE (null) - Starting RTDE Interface
+21:40:50,038 [9] DEBUG RobotServer.RealTimeClient (null) - Starting RealtimeClientReceiver
+21:40:50,038 [9] DEBUG RobotServer.RealTimeClient (null) - Starting RealtimeClientSender
+21:52:12,442 [9] DEBUG RobotServer.RobotController (null) - Started Logging
+21:52:12,463 [9] DEBUG RobotServer.RobotController (null) - Started Robot Model
+21:52:12,467 [9] DEBUG RobotServer.RTDE (null) - Get Controller Version from Robot
+21:52:12,468 [9] DEBUG RobotServer.RTDE (null) - Negotiate Protocol Version with Robot
+21:52:12,469 [9] DEBUG RobotServer.RTDE (null) - Setting up RTDE Interface
+21:52:12,469 [9] DEBUG RobotServer.RTDE (null) - Starting RTDE Interface
+21:52:12,470 [9] DEBUG RobotServer.RealTimeClient (null) - Starting RealtimeClientReceiver
+21:52:12,471 [9] DEBUG RobotServer.RealTimeClient (null) - Starting RealtimeClientSender
+22:06:01,898 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Started Logging
+22:06:01,918 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Started Robot Model
+22:06:01,923 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+22:06:01,925 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+22:06:01,926 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+22:06:01,927 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+22:06:01,928 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+22:06:01,928 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+22:06:02,188 [11] INFO  UniversalRobotsConnect.RobotModel (null) - 0 ,RTDEProtocolVersion: 1
+22:06:02,459 [11] INFO  UniversalRobotsConnect.RobotModel (null) - 24226,872, TargetQ,-2,76192286273193, -1,31132691087354, -1,79604401355698, -1,17697175966362, 2,66876145323737, -1,87128671846274
+22:06:02,460 [11] INFO  UniversalRobotsConnect.RobotModel (null) - 24226,872, TargetQD,0, 0, 0, 0, 0, 0
+22:06:02,461 [11] INFO  UniversalRobotsConnect.RobotModel (null) - 24226,872, TargetQDD,0, 0, 0, 0, 0, 0
+22:06:02,461 [11] INFO  UniversalRobotsConnect.RobotModel (null) - 24226,872, TargetCurrent,3,56768385307178E-17, 1,29950333123396, 3,26439539895864, 0,211003071146965, 0,0421939394944051, 0
+22:06:02,462 [11] INFO  UniversalRobotsConnect.RobotModel (null) - 24226,872, TargetMoment,5,6212426788999E-16, 20,4749744869222, 41,2129919118529, 2,77047032415965, 0,55400642556154, 0
+22:06:02,462 [11] INFO  UniversalRobotsConnect.RobotModel (null) - 24226,872, ActualQ,-2,76192289987673, -1,31132680574526, -1,79604417482485, -1,17697173753847, 2,66876149177551, -1,87128669420351
+22:06:02,463 [11] INFO  UniversalRobotsConnect.RobotModel (null) - 24226,872, ActualQD,0, 0, 0, 0, 0, 0
+22:06:02,541 [11] INFO  UniversalRobotsConnect.RobotModel (null) - 24226,872, ActualCurrent,3,56768391411715E-17, 1,29950332641602, 3,26439547538757, 0,211003065109253, 0,0421939380466938, 0
+22:06:02,541 [11] INFO  UniversalRobotsConnect.RobotModel (null) - 24226,872, ActualTCPPose,-0,529686686866566, -0,123227622527226, 0,7482212827602, 1,09239993323218, -2,13855231721532, 1,475477487224
+22:06:02,543 [11] INFO  UniversalRobotsConnect.RobotModel (null) - 24226,872 ,Robotmode, RUNNING
+22:06:02,544 [11] INFO  UniversalRobotsConnect.RobotModel (null) - 24226,872 ,SafetyMode, NORMAL
+22:20:28,393 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Started Logging
+22:20:28,414 [9] DEBUG UniversalRobotsConnect.RobotController (null) - Started Robot Model
+22:20:28,418 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+22:20:28,419 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+22:20:28,420 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+22:20:28,421 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+22:20:28,422 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+22:20:28,423 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+23:24:09,662 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+23:24:09,679 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+23:24:09,679 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+23:24:09,684 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+23:24:09,685 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+23:24:09,686 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+23:24:09,687 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+23:24:09,689 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+23:24:09,690 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+23:27:00,184 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+23:27:00,201 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+23:27:00,202 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+23:27:00,229 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+23:27:00,231 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+23:27:00,231 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+23:27:00,232 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+23:27:00,233 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+23:27:00,234 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+23:27:21,096 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+23:27:21,117 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+23:27:21,118 [10] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+23:27:21,122 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+23:27:21,123 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+23:27:21,124 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+23:27:21,124 [10] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+23:27:21,125 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+23:27:21,126 [10] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+23:28:53,437 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+23:28:53,454 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+23:28:53,455 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+23:28:53,465 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+23:28:53,466 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+23:28:53,467 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+23:28:53,467 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+23:28:53,468 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+23:28:53,469 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+23:39:46,101 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+23:39:46,119 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+23:39:46,119 [8] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+23:39:46,124 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+23:39:46,125 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+23:39:46,126 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+23:39:46,127 [8] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+23:39:46,128 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+23:39:46,129 [8] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+23:40:19,184 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+23:40:19,203 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+23:40:19,204 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+23:40:19,208 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+23:40:19,209 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+23:40:19,210 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+23:40:19,210 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+23:40:19,211 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+23:40:19,212 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+23:42:13,218 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+23:42:13,235 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+23:42:13,235 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+23:42:13,240 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+23:42:13,241 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+23:42:13,242 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+23:42:13,242 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+23:42:13,243 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+23:42:13,244 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+23:42:55,885 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+23:42:55,904 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+23:42:55,904 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+23:42:55,909 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+23:42:55,910 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+23:42:55,911 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+23:42:55,911 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+23:42:55,913 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+23:42:55,914 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
+23:47:51,040 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+23:47:51,076 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Logging
+23:47:51,077 [9] DEBUG UniversalRobotsConnect.RobotConnector (null) - Started Robot Model
+23:47:51,081 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Get Controller Version from Robot
+23:47:51,083 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Negotiate Protocol Version with Robot
+23:47:51,084 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Setting up RTDE Interface
+23:47:51,084 [9] DEBUG UniversalRobotsConnect.RTDE (null) - Starting RTDE Interface
+23:47:51,087 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientReceiver
+23:47:51,090 [9] DEBUG UniversalRobotsConnect.RealTimeClient (null) - Starting RealtimeClientSender
