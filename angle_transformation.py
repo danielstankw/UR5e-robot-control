@@ -63,33 +63,20 @@ def Rot_matrix(angle, axis):
     return 'Error in Rot_matrix(angle,axis)'
 
 
-def RotationVector(angles_current, angels_desired, angles_format='axis'):
+def AxisAngle_To_RotationVector(angles_current, angels_desired):
     """
     Outputs rotation vector mapping EEF orientation to the orientation in the base frame
     """
-    if angles_format == 'axis':
-        R01 = R.from_rotvec(angles_current).as_matrix()
-        R10 = R01.T
-        R02 = R.from_rotvec(angels_desired).as_matrix()
-        R12 = np.dot(R10, R02)
 
-        Vrot1 = R.from_matrix(R12).as_rotvec()
-        Vrot0 = np.dot(R01, Vrot1)  #   Vrot = R01*R12=R02 (in a vector form)
-        return Vrot0
+    R01 = R.from_rotvec(angles_current).as_matrix()  # rotation from 0 to 1 in (0) world frame
+    R10 = R01.T
+    R02 = R.from_rotvec(angels_desired).as_matrix() # rotation from 0 to 1 in (0) world frame
+    R12 = np.dot(R10, R02) # rotation from 0 to 1 in (0) world frame
 
-    elif angles_format == 'euler':
-        R01 = R.from_euler('xyz', angles_current).as_matrix()
-        R10 = R01.T
-        R02 = R.from_euler('xyz', angels_desired).as_matrix()
-        R12 = np.dot(R10, R02)
+    Vrot1 = R.from_matrix(R12).as_rotvec() # rot vec from 1 to 2 in (1) current frame
+    Vrot0 = np.dot(R01, Vrot1)  # rot vec from 1 to 2 in (0) base frame
+    return Vrot0
 
-        Vrot1 = R.from_matrix(R12).as_rotvec()
-        Vrot0 = np.dot(R01, Vrot1)
-        return Vrot0
-
-
-    print('!!Error in rotation_vector(): argument "angles_format" must get the values: "axis" or "euler"!!')
-    return 'Error in rotation_vector()'
 
 def Rot_marix_to_axis_angles(Rot_matrix):
     Rotvec = R.from_matrix(Rot_matrix).as_rotvec()
