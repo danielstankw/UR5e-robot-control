@@ -12,8 +12,8 @@ class PathPlan(object):
         # Orientation inputs (i.e. initial_pose[3:] and target_pose[3:]) should be in axis-angles representation!!!
 
         # our strategy is minimizing magnitude! (start = theta -> end=0)
-        self.initial_orientation = at.AxisAngle_To_RotationVector(target_pose[3:], initial_pose[3:])
-        self.target_orientation = np.zeros(3)
+        self.initial_orientation = initial_pose[3:]  #at.AxisAngle_To_RotationVector(initial_pose[3:], target_pose[3:])  #(target_pose[3:], initial_pose[3:])
+        self.target_orientation = target_pose[3:]   #np.zeros(3)
         self.t_final = total_time
 
         self.X_init = initial_pose[0]
@@ -54,6 +54,7 @@ class PathPlan(object):
 
         # orientation
         Vrot = at.AxisAngle_To_RotationVector(self.initial_orientation, self.target_orientation)
+        # Vrot = self.initial_orientation.copy()
 
         upper_bound = 1e-6
         if np.linalg.norm(Vrot) < upper_bound:

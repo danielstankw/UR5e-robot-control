@@ -38,20 +38,32 @@ def circular_wrench_limiter(wrench_cmd):
 
     return limited_wrench
 
-def external_calibrate(external_sensor_tool, current_pose):
-    external_sensor_force = at.Tool2Base_vec(current_pose[3:], external_sensor_tool[:3])
-    external_sensor_moment = at.Tool2Base_vec(current_pose[3:], external_sensor_tool[3:])
-    external_sensor_base = np.append(external_sensor_force, external_sensor_moment)
-    return external_sensor_base
+def next_spiral(self, theta_current):
+    # according to the article to assure successful insertion: p<=2d
+    # where p is distance between consequent rings and d is clearance in centralized peg
+    # v = 0.0009230 / 2   # total velocity (linear and angular)
+    v = 0.0025 / 1.5
+    p = 2 * 0.0003  # distance between the consecutive rings
+    dt = 0.002
 
-def run_robot(robot, start_pose, pose_desired, pose_error, control_dim, use_impedance, plot_graphs):
+    theta_dot_current = (2 * np.pi * v) / (p * np.sqrt(1 + theta_current ** 2))
+    # todo: change +/- depending on the desired direction
+    theta_next = theta_current + theta_dot_current * dt
+
+    radius_next = (p / (2 * np.pi)) * theta_next
+
+    x_next = radius_next * np.cos(theta_next)
+    y_next = radius_next * np.sin(theta_next)
+
+    return theta_next, radius_next, x_next,
+
+def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_dim, use_impedance, plot_graphs):
     # Check if the UR controller is powered on and ready to run.
     if use_impedance:
-        control = Controller(control_dim=control_dim)
+        Controller(control_dim=control_dim)
     robot.reset_error()
     robot.set_payload_mass(m=1.12)
     robot.set_payload_cog(CoG=(0.005, 0.00, 0.084))
-    FT_sensor = Onrobot.FT_sensor()
 
     #  move above the hole
     robot.movel(start_pose)
@@ -60,8 +72,8 @@ def run_robot(robot, start_pose, pose_desired, pose_error, control_dim, use_impe
     pose_init = np.array(robot.get_actual_tcp_pose(wait=True))
     vel_init = np.array(robot.get_actual_tcp_speed(wait=False))
 
-    time_insertion = 5
-    time_trajectory = 10
+    time_insertion = 0
+    time_trajectory = 5
     time_for_simulation = time_trajectory + time_insertion
 
     planner = PathPlan(pose_init, pose_desired, time_trajectory)
@@ -71,9 +83,6 @@ def run_robot(robot, start_pose, pose_desired, pose_error, control_dim, use_impe
     [position_ref, orientation_ref, lin_vel_ref, ang_vel_ref] = planner.trajectory_planning(0)
     desired_pos = np.concatenate((position_ref, orientation_ref, lin_vel_ref, ang_vel_ref), axis=0)
 
-    # initialize impedance parameters
-    pose_mod = np.zeros(6)
-    vel_mod = np.zeros(6)
     # ----------- Control Settings -------------------
     # Control params for the free space:
     kp = np.array([2250.0, 2250.0, 2250.0, 50.0, 50.0, 50.0])
@@ -81,13 +90,6 @@ def run_robot(robot, start_pose, pose_desired, pose_error, control_dim, use_impe
 
     # ------------ Forces initialization ------------
     internal_sensor_bias = np.copy(robot.get_tcp_force(wait=True))
-    external_sensor_bias_tool = np.copy(FT_sensor.force_moment_feedback())
-    # TODO: Is order correct????
-    external_sensor_bias_base = external_calibrate(external_sensor_bias_tool, pose_init)
-
-    print(f'internal sensor reading (base) = {internal_sensor_bias}')
-    print(f'external sensor reading (tool) = {external_sensor_bias_tool}')
-    print(f'external sensor reading (base) = {external_sensor_bias_base}')
 
     # plotting
     if True:
@@ -122,7 +124,7 @@ def run_robot(robot, start_pose, pose_desired, pose_error, control_dim, use_impe
 
         t_init = time.time()
         t_curr = 0
-        contact_flag = False
+        made_contact = False
         contact_time = 0
         f0 = np.zeros(6)
 
@@ -139,7 +141,7 @@ def run_robot(robot, start_pose, pose_desired, pose_error, control_dim, use_impe
                 t_prev = t_curr
                 t_curr = time.time() - t_init
                 dt = t_curr - t_prev  # 1/125
-                print(f'\nt = {t_curr} (dt ={dt}):')
+                # print(f'\nt = {t_curr} (dt ={dt}):')
 
                 # ---------- Read Sensors -------------------
                 ee_pose = robot.get_actual_tcp_pose(wait=True)  # [x,y,z,rx,ry,rz] - ri: axis-angles
@@ -148,17 +150,16 @@ def run_robot(robot, start_pose, pose_desired, pose_error, control_dim, use_impe
 
                 # ----------- F/T calibration ----------------
                 f_int = internal_sensor_reading - internal_sensor_bias
-
-                external_sensor_tool = FT_sensor.force_moment_feedback() - external_sensor_bias_tool
-                f_ext = external_calibrate(external_sensor_tool, ee_pose)
-                print(f'f_int = {f_int} [N]')
-                print(f'f_ext = {f_ext} [N]')
+                print(t_curr)
 
                 # detect contact with the surface
-                if np.abs(f_int[2]) > contact_fz_threshold and contact_flag is False:
+                if np.abs(f_int[2]) > contact_fz_threshold and made_contact is False:
                     print('%%%%%%%%%% Contact established %%%%%%%%%%%')
                     contact_time = t_curr
-                    contact_flag = True
+                    made_contact = True
+                    impedance_vec = deepcopy(desired_pos)
+                    kp = np.array([5000.0, 5000.0, 250.0, 450.0, 450.0, 450.0])
+                    kd = 2 * np.sqrt(kp) * np.sqrt(2)
 
                 # ------------- Minimum Jerk Trajectory updating ----------------------
                 # Check if updating reference values with the minimum-jerk trajectory is necessary
@@ -167,25 +168,12 @@ def run_robot(robot, start_pose, pose_desired, pose_error, control_dim, use_impe
                     desired_pos = np.concatenate((position_ref, orientation_ref, lin_vel_ref, ang_vel_ref), axis=0)
 
                 # when contact is established
-                if contact_flag:
-                    # only at the initial time of contact
-                    if t_curr == contact_time:
-                        print('initializing contact pd params')
-                        # initialize impedance params
-                        pose_mod = deepcopy(desired_pos[:6])
-                        vel_mod = deepcopy(desired_pos[6:])
-                        # contact pd parameters
-                        kp = np.array([2250.0*2, 2250.0*2, 2250.0*2, 50.0, 50.0, 50.0])
-                        kd = 2 * np.sqrt(kp) * 0.707
-
+                if made_contact:
                     if use_impedance:
-                        # f_int or f_ext
-                        X_next = control.impedance_equation(pose_ref=desired_pos[:6], vel_ref=desired_pos[6:],
-                                                            pose_mod=pose_mod, vel_mod=vel_mod,
-                                                            f_int=f_ext, f0=f0, dt=dt)
-                        desired_pos = deepcopy(X_next)
-                        pose_mod = X_next[:6]
-                        vel_mod = X_next[6:]
+                        desired_pos = deepcopy(
+                            Controller.impedance_equation(f_int, f0, desired_pos[:3], desired_pos[3:6],
+                                                          desired_pos[6:9], desired_pos[9:12], dt))
+
                 # ----------- - - - - = = = Control = = = - - - - -------------
                 ori_real = at.AxisAngle_To_RotationVector(pose_desired[3:], ee_pose[3:])
 
@@ -196,14 +184,14 @@ def run_robot(robot, start_pose, pose_desired, pose_error, control_dim, use_impe
                 vel_pos_error = desired_pos[6:9].T - ee_vel[:3]
                 vel_ori_error = desired_pos[9:12] - ee_vel[3:]
 
+                # # For PD only (without impedance):
+                print('Using PD Controller')
                 desired_force = (np.multiply(np.array(position_error), np.array(kp[0:3]))
                                  + np.multiply(vel_pos_error, kd[0:3]))
 
                 desired_torque = (np.multiply(np.array(ori_error), np.array(kp[3:6]))
                                   + np.multiply(vel_ori_error, kd[3:6]))
-
-                compensation = deepcopy(internal_sensor_bias)
-                wrench_task = np.concatenate([desired_force, desired_torque]) - compensation
+                wrench_task = np.concatenate([desired_force, desired_torque])
 
                 # ---------------- Sending the wrench to the robot --------------------
                 # print('wrench_task:', wrench_task)
@@ -243,18 +231,18 @@ def run_robot(robot, start_pose, pose_desired, pose_error, control_dim, use_impe
                     ori_vel_min_jerk_y.append(desired_pos[10])
                     ori_vel_min_jerk_z.append(desired_pos[11])
                     # impedance
-                    # impedance_pos_vec_x.append(desired_pos[0])
-                    # impedance_pos_vec_y.append(desired_pos[1])
-                    # impedance_pos_vec_z.append(desired_pos[2])
-                    # impedance_ori_vec_x.append(desired_pos[3])
-                    # impedance_ori_vec_y.append(desired_pos[4])
-                    # impedance_ori_vec_z.append(desired_pos[5])
-                    # impedance_vel_vec_x.append(desired_pos[6])
-                    # impedance_vel_vec_y.append(desired_pos[7])
-                    # impedance_vel_vec_z.append(desired_pos[8])
-                    # impedance_ori_vel_vec_x.append(desired_pos[9])
-                    # impedance_ori_vel_vec_y.append(desired_pos[10])
-                    # impedance_ori_vel_vec_z.append(desired_pos[11])
+                    impedance_pos_vec_x.append(desired_pos[0])
+                    impedance_pos_vec_y.append(desired_pos[1])
+                    impedance_pos_vec_z.append(desired_pos[2])
+                    impedance_ori_vec_x.append(desired_pos[3])
+                    impedance_ori_vec_y.append(desired_pos[4])
+                    impedance_ori_vec_z.append(desired_pos[5])
+                    impedance_vel_vec_x.append(desired_pos[6])
+                    impedance_vel_vec_y.append(desired_pos[7])
+                    impedance_vel_vec_z.append(desired_pos[8])
+                    impedance_ori_vel_vec_x.append(desired_pos[9])
+                    impedance_ori_vel_vec_y.append(desired_pos[10])
+                    impedance_ori_vel_vec_z.append(desired_pos[11])
                     # # wrench - based on PD
                     applied_wrench_fx.append(wrench_safe[0])
                     applied_wrench_fy.append(wrench_safe[1])
@@ -323,23 +311,23 @@ def run_robot(robot, start_pose, pose_desired, pose_error, control_dim, use_impe
         t = time_vec
         plt.figure("Position")
         ax1 = plt.subplot(311)
+        ax1.plot(t, impedance_pos_vec_x, 'g--', label='Xm position')
         ax1.plot(t, ee_pos_x_vec, 'b', label='Xr position')
         ax1.plot(t, pos_min_jerk_x, 'r--', label='X_ref position')
-        ax1.axvline(x=contact_time, color='k', linestyle='--', label=f"Time of contact: {np.round(contact_time,2)}")
         ax1.legend()
         ax1.set_title('X Position [m]')
 
         ax2 = plt.subplot(312)
+        ax1.plot(t, impedance_pos_vec_y, 'g--', label='Ym position')
         ax2.plot(t, ee_pos_y_vec, 'b', label='Yr position')
         ax2.plot(t, pos_min_jerk_y, 'r--', label='Y_ref position')
-        ax2.axvline(x=contact_time, color='k', linestyle='--', label=f"Time of contact: {np.round(contact_time,2)}")
         ax2.legend()
         ax2.set_title('Y Position [m]')
 
         ax3 = plt.subplot(313)
+        ax1.plot(t, impedance_pos_vec_z, 'g--', label='Zm position')
         ax3.plot(t, ee_pos_z_vec, 'b', label='Zr position')
         ax3.plot(t, pos_min_jerk_z, 'r--', label='Z_ref position')
-        ax3.axvline(x=contact_time, color='k', linestyle='--', label=f"Time of contact: {np.round(contact_time,2)}")
         ax3.legend()
         ax3.set_title('Z Position [m]')
         ################################################################################################################
@@ -404,21 +392,18 @@ def run_robot(robot, start_pose, pose_desired, pose_error, control_dim, use_impe
         ax1 = plt.subplot(311)
         ax1.plot(t, sensor_fx, 'b', label='Fx_sensor')
         ax1.plot(t, applied_wrench_fx, 'g', label='Fx_wrench')
-        ax1.axvline(x=contact_time, color='k', linestyle='--', label=f"Time of contact: {np.round(contact_time,2)}")
         ax1.legend()
         ax1.set_title('Fx [N]')
 
         ax2 = plt.subplot(312)
         ax2.plot(t, sensor_fy, 'b', label='Fy_sensor')
         ax2.plot(t, applied_wrench_fy, 'g', label='Fy_wrench')
-        ax2.axvline(x=contact_time, color='k', linestyle='--', label=f"Time of contact: {np.round(contact_time,2)}")
         ax2.legend()
         ax2.set_title('Fy [N]')
 
         ax3 = plt.subplot(313)
         ax3.plot(t, sensor_fz, 'b', label='Fz_sensor')
         ax3.plot(t, applied_wrench_fz, 'g', label='Fz_wrench')
-        ax3.axvline(x=contact_time, color='k', linestyle='--', label=f"Time of contact: {np.round(contact_time,2)}")
         ax3.legend()
         ax3.set_title('Fz [N]')
         ################################################################################################################
