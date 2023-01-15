@@ -709,7 +709,55 @@ end
         if(wait):
             self.waitRobotIdleOrStopFlag()
 
-####################   Module internals    ####################
+    def force_mode_set_damping(self, damping=0, wait=True):
+        '''
+        Sets the damping parameter in force mode.
+        Parameters
+        damping: Between 0 and 1, default value is 0.
+        Value of 1 is full damping, so the robot will decelerate quickly if no force is present. A value of 0 is
+        no damping, here the robot will maintain the speed
+        '''
+        prg = 'force_mode_set_damping({damping})\n'
+
+        programString = prg.format(**locals())
+
+        self.robotConnector.RealTimeClient.Send(programString)
+        if (wait):
+            self.waitRobotIdleOrStopFlag()
+
+    def force_mode_set_gain_scaling(self, scaling=1, wait=True):
+        '''
+        Scales the gain in force mode
+        Parameters
+        scaling: Between 0 and 2, default value is 1.
+        A value larger than 1 can make force mode unstable, e.g. in case of collisions or pushing against
+        hard surfaces.
+        '''
+        prg = 'force_mode_set_gain_scaling({scaling})\n'
+
+        programString = prg.format(**locals())
+
+        self.robotConnector.RealTimeClient.Send(programString)
+        if (wait):
+            self.waitRobotIdleOrStopFlag()
+
+    def zero_ftsensor(self, wait=True):
+        '''
+        Zeroes the TCP force/torque measurement from the builtin force/torque sensor by subtracting the
+        current measurement from the subsequent.
+        :param wait: a boolean (True or False). If equal to True the script would wait for the robot to respond.
+        :return:
+        Daniel: it is advised to use it before using force_mode to tear sensor and obtain more accurate sensor measurements
+        '''
+        prg = 'zero_ftsensor()\n'
+
+        programString = prg.format(**locals())
+
+        self.robotConnector.RealTimeClient.Send(programString)
+        if (wait):
+            self.waitRobotIdleOrStopFlag()
+
+    ####################   Module internals    ####################
     
     def force(self, wait=True):
         '''
