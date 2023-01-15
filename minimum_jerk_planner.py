@@ -14,6 +14,8 @@ class PathPlan(object):
         # our strategy is minimizing magnitude! (start = theta -> end=0)
         self.initial_orientation = initial_pose[3:]  #at.AxisAngle_To_RotationVector(initial_pose[3:], target_pose[3:])  #(target_pose[3:], initial_pose[3:])
         self.target_orientation = target_pose[3:]   #np.zeros(3)
+        self.Vrot = at.AxisAngle_To_RotationVector(self.initial_orientation, self.target_orientation)
+
         self.t_final = total_time
 
         self.X_init = initial_pose[0]
@@ -53,16 +55,15 @@ class PathPlan(object):
         acceleration = np.array([ax, ay, az])
 
         # orientation
-        Vrot = at.AxisAngle_To_RotationVector(self.initial_orientation, self.target_orientation)
         # Vrot = self.initial_orientation.copy()
 
         upper_bound = 1e-6
-        if np.linalg.norm(Vrot) < upper_bound:
+        if np.linalg.norm(self.Vrot) < upper_bound:
             magnitude_traj = 0.0
             magnitude_vel_traj = 0.0
             direction = np.array([0.0, 0.0, 0.0])
         else:
-            magnitude, direction = at.Axis2Vector(Vrot)
+            magnitude, direction = at.Axis2Vector(self.Vrot)
             # Daniel: this is Shir convention that is why she multiplied everything by (-1)
             # we use decrease magnitude strategy t_start: theta -> t_end = 0
             magnitude_traj = magnitude / (self.t_final ** 3) * (
