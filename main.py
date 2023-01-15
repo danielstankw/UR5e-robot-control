@@ -24,21 +24,26 @@ host = '192.168.1.103'
 robotModle = URBasic.robotModel.RobotModel()
 robot = URBasic.urScriptExt.UrScriptExt(host=host, robotModel=robotModle)
 FT_sensor = Onrobot.FT_sensor()
-
+# robot.reset_registers()
 # Simulation values
 # ---------------- -free space---------------------
 # init_pose = np.array([-0.2554, -0.3408, 0.2068, 0.1136, -3.1317, -0.0571])
 # goal_pose = np.array([-0.0575, -0.4350, 0.2497, 0.3463, 2.9853, -0.2836])
 
-# # -----------------------above hole ------------------
-init_pose = np.array([0.0875, -0.4830, 0.1022, -0.0730, 3.1407, 0.0000])
-goal_pose = np.array([0.0875, -0.4830, 0.0731, -0.0730, 3.1407, 0.0000])
+# # -----------------------above hole: d_peg=8.5mm / d_hole=10mm ------------------
+init_pose = np.array([0.0859, -0.4810,  0.0837,   -0.0729,  3.1407, -0.0001])
+goal_pose = np.array([0.0859, -0.4810,  0.0730,   -0.0729,  3.1407, -0.0001])
+
+
+# init_pose = np.array([0.1012, -0.4877, 0.0869, -0.0730, 3.1407, -0.0000])
+# goal_pose = np.array([0.1012, -0.4877, 0.0731, -0.0730, 3.1407, -0.0000])
+
 
 plot_graphs = True
 use_spiral = False  # TODO: doesnt work yet
-render = False
+use_circle = False
 error_type = "fixed"
-error_vec = [3.0, 0.0, 0.0]
+error_vec = [0.0, -2.5, 0.0]
 control_dim = 26
 use_impedance = True
 
@@ -78,11 +83,11 @@ for trial in range(1, num_of_trials + 1):
         success_flag = run_robot_with_spiral(robot=robot, start_pose=start_pose,
                                              pose_desired=desired_pose, pose_error=pose_error,
                                              control_dim=control_dim, use_impedance=use_impedance,
-                                             plot_graphs=plot_graphs)
+                                             plot_graphs=plot_graphs, circle=use_circle)
     else:
         success_flag = run_robot(robot=robot, start_pose=start_pose,
                                  pose_desired=desired_pose, pose_error=pose_error,
-                                 control_dim=control_dim, use_impedance=use_impedance, plot_graphs=plot_graphs)
+                                 control_dim=control_dim, use_impedance=use_impedance, plot_graphs=plot_graphs, sensor_class = FT_sensor)
 
     if success_flag == 'error' or success_flag == 'interrupt':
         print('\n!!!There was error or Keyboard Interruption during simulation!!!\n')
