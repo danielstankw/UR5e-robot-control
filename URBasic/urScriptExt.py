@@ -29,6 +29,7 @@ import URBasic
 import numpy as np
 import time
 
+import xml.etree.ElementTree as ET
 
 class UrScriptExt(URBasic.urScript.UrScript):
     '''
@@ -152,7 +153,27 @@ class UrScriptExt(URBasic.urScript.UrScript):
             return True  # Vi har sendt det .. vi checker ikke
         else:
             return False
-
+    # def reset_registers(self):
+    # #
+    #     if self.robotConnector.RTDE.isRunning():
+    #         tree = ET.parse('/home/danieln7/Desktop/RobotCodeDaniel/rtdeConfigurationDefault.xml')
+    #         root = tree.getroot()
+    #
+    #         for send in root.findall("./send[@key='in']"):
+    #             for field in send.iter('field'):
+    #                 print(field.attrib['name'])
+    #                 self.robotConnector.RTDE.setData(field.attrib['name'], 0)
+    #
+    #         self.robotConnector.RTDE.sendData()
+    #         return True
+    #
+    #     else:
+    #         if not self.robotConnector.RobotModel.forceRemoteActiveFlag:
+    #             self.__logger.warning('Force Remote not initialized')
+    #         else:
+    #             self.__logger.warning('RTDE is not running')
+    #
+    #         return False
     def init_force_remote(self, task_frame=[0.0, 0.0, 0.0, 0.0, 0.0, 0.0], f_type=2):
         '''
         The Force Remote function enables changing the force settings dynamically,
