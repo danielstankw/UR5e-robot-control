@@ -14,6 +14,7 @@ class PathPlan(object):
         # our strategy is minimizing magnitude! (start = theta -> end=0)
         self.initial_orientation = initial_pose[3:]  #at.AxisAngle_To_RotationVector(initial_pose[3:], target_pose[3:])  #(target_pose[3:], initial_pose[3:])
         self.target_orientation = target_pose[3:]   #np.zeros(3)
+        # rot vec from start orient to end orient (1)->(2) given in world/ base frame
         self.Vrot = at.AxisAngle_To_RotationVector(self.initial_orientation, self.target_orientation)
 
         self.t_final = total_time
@@ -55,8 +56,6 @@ class PathPlan(object):
         acceleration = np.array([ax, ay, az])
 
         # orientation
-        # Vrot = self.initial_orientation.copy()
-
         upper_bound = 1e-6
         if np.linalg.norm(self.Vrot) < upper_bound:
             magnitude_traj = 0.0
