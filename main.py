@@ -31,48 +31,53 @@ FT_sensor = Onrobot.FT_sensor()
 # goal_pose = np.array([-0.0575, -0.4350, 0.2497, 0.3463, 2.9853, -0.2836])
 
 # # -----------------------above hole: d_peg=8.5mm / d_hole=10mm ------------------
-init_pose = np.array([0.0859, -0.4810,  0.0837,   -0.0729,  3.1407, -0.0001])
-goal_pose = np.array([0.0859, -0.4810,  0.0730,   -0.0729,  3.1407, -0.0001])
+# init_pose = np.array([0.0859, -0.4810,  0.0837,   -0.0729,  3.1407, -0.0001])
+# goal_pose = np.array([0.0859, -0.4810,  0.0730,   -0.0729,  3.1407, -0.0001])
+# # -----------------------above hole: d_peg=4.2mm / d_hole=4.6mm ------------------
+init_pose = np.array([-0.1380, -0.5094,  0.0747,   -0.0729,  3.1407, -0.0001])
+goal_pose = np.array([-0.1380, -0.5094,  0.0659,   -0.0729,  3.1407, -0.0001])
 
 
 # init_pose = np.array([0.1012, -0.4877, 0.0869, -0.0730, 3.1407, -0.0000])
 # goal_pose = np.array([0.1012, -0.4877, 0.0731, -0.0730, 3.1407, -0.0000])
 
 
-plot_graphs = True
+plot_graphs = False
 use_spiral = False  # TODO: doesnt work yet
 use_circle = False
-error_type = "fixed"
-error_vec = [0.0, -2.5, 0.0]
+error_type = "none"
+error_vec = [-2.5, 0.0, 0.0]
 control_dim = 26
 use_impedance = True
+time_insertion = 5
+time_trajectory = 5
 
 # end of simulation values
 
-pos_error = [0, 0, 0]
 
-if error_type == 'none':
-    pos_error = np.array([0.0, 0.0, 0.0])
-if error_type == 'fixed':
-    pos_error = np.array(error_vec) / 1000  # fixed error
-if error_type == 'ring':
-    r_low = 0.4 / 1000
-    r_high = 0.8 / 1000
-    r = random.uniform(r_low, r_high)
-    theta = random.uniform(0, 2 * np.pi)
-    x_error = r * np.cos(theta)
-    y_error = r * np.sin(theta)
-
-    pos_error[:2] = np.array([x_error, y_error])
 
 # Control Loop
-num_of_trials = 1
+num_of_trials = 50
 success_counter = 0
 t_start = time.time()
 for trial in range(1, num_of_trials + 1):
     # if trail == num_of_trails:
     #     is_plot = True
+    pos_error = [0, 0, 0]
 
+    if error_type == 'none':
+        pos_error = np.array([0.0, 0.0, 0.0])
+    if error_type == 'fixed':
+        pos_error = np.array(error_vec) / 1000  # fixed error
+    if error_type == 'ring':
+        r_low = 0.6 / 1000
+        r_high = 0.8 / 1000
+        r = random.uniform(r_low, r_high)
+        theta = random.uniform(0, 2 * np.pi)
+        x_error = r * np.cos(theta)
+        y_error = r * np.sin(theta)
+
+        pos_error[:2] = np.array([x_error, y_error])
     pose_error = np.array([pos_error[0], pos_error[1], pos_error[2], 0.0, 0.0, 0.0])
     # start pose: above the hole
     start_pose = init_pose + pose_error
@@ -83,11 +88,12 @@ for trial in range(1, num_of_trials + 1):
         success_flag = run_robot_with_spiral(robot=robot, start_pose=start_pose,
                                              pose_desired=desired_pose, pose_error=pose_error,
                                              control_dim=control_dim, use_impedance=use_impedance,
-                                             plot_graphs=plot_graphs, circle=use_circle)
+                                             plot_graphs=plot_graphs, circle=use_circle, sensor_class = FT_sensor)
     else:
         success_flag = run_robot(robot=robot, start_pose=start_pose,
                                  pose_desired=desired_pose, pose_error=pose_error,
-                                 control_dim=control_dim, use_impedance=use_impedance, plot_graphs=plot_graphs, sensor_class = FT_sensor)
+                                 control_dim=control_dim, use_impedance=use_impedance, plot_graphs=plot_graphs, sensor_class = FT_sensor, time_insertion=time_insertion,
+                                 time_trajectory=time_trajectory)
 
     if success_flag == 'error' or success_flag == 'interrupt':
         print('\n!!!There was error or Keyboard Interruption during simulation!!!\n')
