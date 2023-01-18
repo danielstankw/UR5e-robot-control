@@ -9,19 +9,49 @@ import angle_transformation as at
 from matplotlib import pyplot as plt
 from Controller import Controller
 
+ERROR_TOP = 0.7/1000
+
 
 # import traceback
 # import os
 # # ------ this for stopping the while loop with Ctrl+C (KeyboardInterrupt) this has to be at the top of the file!!--------
 # os.environ['FOR_DISABLE_CONSOLE_CTRL_HANDLER'] = 'T'
 
-def next_spiral(theta_current):
+def label_check(peg_xy, hole_xy):
+    """
+    Function responsible for labeling classes
+    :param peg_xy: : x and y coordinates of the peg
+    :param hole_xy: x and y coordinates of the hole
+    :return: True: if there is sufficient overlap/ False: no sufficient overlap
+    """
+    hole_x = hole_xy[0]
+    hole_y = hole_xy[1]
+    peg_x = peg_xy[0]
+    peg_y = peg_xy[1]
+
+    radial_distance = np.sqrt((peg_x - hole_x) ** 2 + (peg_y - hole_y) ** 2)
+    # print(radial_distance)
+    if radial_distance < ERROR_TOP:
+        print(radial_distance)
+        print('True')
+        return True
+    else:
+        return False
+
+
+def next_spiral(theta_current, dt):
+    """
+    Function responsible for generating spiral trajectory. According to the research to ensure insertion
+    pitch (p) and clearance (d) have to satisfy: p<=2d
+    :param theta_current: current value of angle [rad]
+    :param dt: time step of the simulation [sec]
+    :return: theta_next, radius_next, x_next, y_next
+    """
     # according to the article to assure successful insertion: p<=2d
     # where p is distance between consequent rings and d is clearance in centralized peg
     # v = 0.0009230 / 2   # total velocity (linear and angular)
     v = 0.0025 / 1.5
-    p = 2 * 0.0003  # distance between the consecutive rings
-    dt = 0.002
+    p = 3 * 0.0003  # distance between the consecutive rings
 
     theta_dot_current = (2 * np.pi * v) / (p * np.sqrt(1 + theta_current ** 2))
     # todo: change +/- depending on the desired direction
@@ -34,10 +64,10 @@ def next_spiral(theta_current):
     return theta_next, radius_next, x_next, y_next
 def next_circle(theta_current, dt):
     # overlap=error-2*radius_of_circle
-    time_per_circle = 4
+    time_per_circle = 6 #4
     # 0.0025, 0.0026, 0.0027 with perturbation
     # 0.0028 always enters
-    radius_of_circle = 3 / 1000
+    radius_of_circle = 0.00265#3 / 1000#0
     # increase in angle per dt
     d_theta = (2 * np.pi * dt) / time_per_circle
     theta_next = theta_current + d_theta
@@ -46,6 +76,8 @@ def next_circle(theta_current, dt):
     y_next = radius_of_circle * np.sin(theta_next)
 
     return theta_next, radius_of_circle, x_next, y_next
+
+
 def circular_wrench_limiter(wrench_cmd):
     # Limit the wrench in TOOL frame in a circular way. meaning that Fxy and Mxy consider as a vector with limited radius
     wrench_safety_limits = dict(Fxy=20, Fz=15, Mxy=4, Mz=3)
@@ -73,13 +105,16 @@ def circular_wrench_limiter(wrench_cmd):
 
     return limited_wrench
 
+
 def external_calibrate(external_sensor_tool, current_pose):
     external_sensor_force = at.Tool2Base_vec(current_pose[3:], external_sensor_tool[:3])
     external_sensor_moment = at.Tool2Base_vec(current_pose[3:], external_sensor_tool[3:])
     external_sensor_base = np.append(external_sensor_force, external_sensor_moment)
     return external_sensor_base
 
-def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_dim, use_impedance, plot_graphs, circle, sensor_class, time_insertion, time_trajectory):
+
+def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_dim, use_impedance, plot_graphs, circle,
+                          sensor_class, time_insertion, time_trajectory):
     # Check if the UR controller is powered on and ready to run.
     real_goal_pose = pose_desired - pose_error
     if use_impedance:
@@ -95,6 +130,7 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
     time.sleep(0.5)  # Wait for the robot/measurements to be stable before starting the insertion
     robot.zero_ftsensor()
     robot.force_mode_set_damping(0)
+    robot.force_mode_set_gain_scaling(1)  # or decrease P[2] in free space and increase here to 1.5
 
     pose_init = np.array(robot.get_actual_tcp_pose(wait=True))
     # pose_init = deepcopy(start_pose)
@@ -115,6 +151,7 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
     # ----------- Control Settings -------------------
     # Control params for the free space:
     kp = np.array([4500.0, 4500.0, 2250.0, 50.0, 50.0, 50.0])
+    # kp = np.array([4500.0, 4500.0, 5.0, 50.0, 50.0, 50.0]) # change internal gain
     kd = 2 * 7 * np.sqrt(kp)
 
     # ------------ Forces initialization ------------
@@ -150,6 +187,8 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
         robot_spiral_x, robot_spiral_y = [], []
         unclipped_wrench_fx, unclipped_wrench_fy, unclipped_wrench_fz = [], [], []
         unclipped_wrench_mx, unclipped_wrench_my, unclipped_wrench_mz = [], [], []
+        # for labeling
+        labels = []
 
     try:
         # ------------ Simulation(Loop) setup ----------------
@@ -181,8 +220,8 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
                 dt = t_curr - t_prev  # 1/125
                 # print(f'\nt = {t_curr} (dt ={dt}):')
 
-                print('kp', kp)
-                print('kd', kd)
+                # print('kp', kp)
+                # print('kd', kd)
 
                 # ---------- Read Sensors -------------------
                 ee_pose = robot.get_actual_tcp_pose(wait=True)  # [x,y,z,rx,ry,rz] - ri: axis-angles
@@ -210,6 +249,9 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
                     # contact pd parameters
                     kp = np.array([2250.0 * 5, 2250.0 * 5, 1250.0, 50.0, 50.0, 50.0])
                     kd = 2 * np.sqrt(kp) * 5
+                    # introduces delay!!! in ref trajectory
+                    # robot.force_mode_set_gain_scaling(2, wait=False)
+                    # time.sleep(1)
                     # robot.force_mode_set_damping(0.5)
 
                 # ------------- Minimum Jerk Trajectory updating ----------------------
@@ -220,7 +262,8 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
 
                 else:
                     # continue
-                    [position_ref, orientation_ref, lin_vel_ref, ang_vel_ref] = planner.trajectory_planning(time_trajectory)
+                    [position_ref, orientation_ref, lin_vel_ref, ang_vel_ref] = planner.trajectory_planning(
+                        time_trajectory)
                     desired_pos = np.concatenate((position_ref, orientation_ref, lin_vel_ref, ang_vel_ref), axis=0)
 
                 # when contact is established
@@ -234,7 +277,7 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
                     else:
                         """Spiral Search mode"""
                         print('Using spiral Mode')
-                        theta_next, radius_next, x_spiral_next, y_spiral_next = next_spiral(theta_current)
+                        theta_next, radius_next, x_spiral_next, y_spiral_next = next_spiral(theta_current, dt)
                         # add shift to the spiral search which is planned at (0,0)
                         spiral_x.append(x_spiral_next + desired_pos[0])
                         spiral_y.append(y_spiral_next + desired_pos[1])
@@ -276,7 +319,8 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
                 if contact_flag:
                     if use_impedance:
                         print('Impedance Control')
-                        compensation = [0, 0, 1, 0, 0, 0] * internal_sensor_reading + [1, 1, 0, 1, 1, 1] * internal_sensor_bias
+                        compensation = [0, 0, 1, 0, 0, 0] * internal_sensor_reading + [1, 1, 0, 1, 1,
+                                                                                       1] * internal_sensor_bias
                         wrench_task = np.concatenate([desired_force, desired_torque]) - compensation
                         wrench_task[2] = -5 - internal_sensor_bias[2]
 
@@ -290,7 +334,7 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
 
                 else:
                     # Free space
-                    print('Free Space Control')
+                    # print('Free Space Control')
                     compensation = deepcopy(internal_sensor_reading)
                     wrench_task = np.concatenate([desired_force, desired_torque]) - compensation
 
@@ -301,6 +345,8 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
 
                 robot.set_force_remote(task_frame=[0, 0, 0, 0, 0, 0], selection_vector=[1, 1, 1, 1, 1, 1],
                                        wrench=wrench_safe, f_type=2, limits=[2, 2, 1.5, 1, 1, 1])
+
+                label = label_check(peg_xy=ee_pose[:2], hole_xy=real_goal_pose[:2])
 
                 if True:
                     # for graphs:
@@ -352,6 +398,8 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
                     sensor_mx.append(f_int[3])
                     sensor_my.append(f_int[4])
                     sensor_mz.append(f_int[5])
+                    # label
+                    labels.append(label)
 
                 # ---------- Stop simulation if the robot reaches the goal --------
                 # goal without any error
@@ -405,11 +453,20 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
     if plot_graphs:
         t = time_vec
 
+        theta = np.linspace(0, 2 * np.pi, 100)
+
+        x_error_top = ERROR_TOP * np.cos(theta) + real_goal_pose[0]
+        y_error_top = ERROR_TOP * np.sin(theta) + real_goal_pose[1]
+
+        if circle:
+            print((np.abs(max(robot_spiral_x))-np.abs(real_goal_pose[0]))*1000)
+
         plt.figure("Spiral")
         plt.plot(spiral_x, spiral_y, 'g', label='Ref position')
         plt.plot(robot_spiral_x, robot_spiral_y, 'b', label='Robot position')
         plt.plot(real_goal_pose[0], real_goal_pose[1], "ro", label='hole position')
         plt.plot(spiral_x[0], spiral_y[0], "go", label='spiral start position')
+        plt.plot(x_error_top, y_error_top, 'r', label='Error_top')
         plt.plot(robot_spiral_x[0], robot_spiral_y[0], "bo")
         plt.legend()
         plt.grid()
@@ -426,6 +483,7 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
         ax2 = plt.subplot(312)
         ax2.plot(t, pos_min_jerk_x, 'g--', label='X_ref position')
         ax2.plot(t, ee_pos_x_vec, 'b', label='Xr position')
+        ax2.axvline(x=contact_time, color='k', linestyle='--', label=f"Time of contact: {np.round(contact_time, 2)}")
         ax2.legend()
         ax2.grid()
         ax2.set_title('X Position [m]')
@@ -433,6 +491,7 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
         ax3 = plt.subplot(313)
         ax3.plot(t, pos_min_jerk_y, 'g--', label='Y_ref position')
         ax3.plot(t, ee_pos_y_vec, 'b', label='Yr position')
+        ax3.axvline(x=contact_time, color='k', linestyle='--', label=f"Time of contact: {np.round(contact_time, 2)}")
         ax3.legend()
         ax3.grid()
         ax3.set_title('Y Position [m]')
@@ -441,22 +500,25 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
         ax1 = plt.subplot(311)
         ax1.plot(t, ee_pos_x_vec, 'b', label='Xr position')
         ax1.plot(t, pos_min_jerk_x, 'r--', label='X_ref position')
-        ax1.axvline(x=contact_time, color='k', linestyle='--', label=f"Time of contact: {np.round(contact_time,2)}")
+        ax1.axvline(x=contact_time, color='k', linestyle='--', label=f"Time of contact: {np.round(contact_time, 2)}")
         ax1.legend()
+        ax1.grid()
         ax1.set_title('X Position [m]')
 
         ax2 = plt.subplot(312)
         ax2.plot(t, ee_pos_y_vec, 'b', label='Yr position')
         ax2.plot(t, pos_min_jerk_y, 'r--', label='Y_ref position')
-        ax2.axvline(x=contact_time, color='k', linestyle='--', label=f"Time of contact: {np.round(contact_time,2)}")
+        ax2.axvline(x=contact_time, color='k', linestyle='--', label=f"Time of contact: {np.round(contact_time, 2)}")
         ax2.legend()
+        ax2.grid()
         ax2.set_title('Y Position [m]')
 
         ax3 = plt.subplot(313)
         ax3.plot(t, ee_pos_z_vec, 'b', label='Zr position')
         ax3.plot(t, pos_min_jerk_z, 'r--', label='Z_ref position')
-        ax3.axvline(x=contact_time, color='k', linestyle='--', label=f"Time of contact: {np.round(contact_time,2)}")
+        ax3.axvline(x=contact_time, color='k', linestyle='--', label=f"Time of contact: {np.round(contact_time, 2)}")
         ax3.legend()
+        ax3.grid()
         ax3.set_title('Z Position [m]')
         ################################################################################################################
         # plt.figure("Linear velocity")
@@ -521,7 +583,7 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
         ax1.plot(t, sensor_fx, 'b', label='Fx_sensor')
         ax1.plot(t, unclipped_wrench_fx, 'r', label='Fx_unclipped')
         ax1.plot(t, applied_wrench_fx, 'g', label='Fx_applied')
-        ax1.axvline(x=contact_time, color='k', linestyle='--', label=f"Time of contact: {np.round(contact_time,2)}")
+        ax1.axvline(x=contact_time, color='k', linestyle='--', label=f"Time of contact: {np.round(contact_time, 2)}")
         ax1.grid()
         ax1.legend()
         ax1.set_title('Fx [N]')
@@ -530,7 +592,7 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
         ax2.plot(t, sensor_fy, 'b', label='Fy_sensor')
         ax2.plot(t, unclipped_wrench_fy, 'r', label='Fy_unclipped')
         ax2.plot(t, applied_wrench_fy, 'g', label='Fy_applied')
-        ax2.axvline(x=contact_time, color='k', linestyle='--', label=f"Time of contact: {np.round(contact_time,2)}")
+        ax2.axvline(x=contact_time, color='k', linestyle='--', label=f"Time of contact: {np.round(contact_time, 2)}")
         ax2.grid()
         ax2.legend()
         ax2.set_title('Fy [N]')
@@ -539,7 +601,7 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
         ax3.plot(t, sensor_fz, 'b', label='Fz_sensor')
         ax3.plot(t, unclipped_wrench_fz, 'r', label='Fz_unclipped')
         ax3.plot(t, applied_wrench_fz, 'g', label='Fz_applied')
-        ax3.axvline(x=contact_time, color='k', linestyle='--', label=f"Time of contact: {np.round(contact_time,2)}")
+        ax3.axvline(x=contact_time, color='k', linestyle='--', label=f"Time of contact: {np.round(contact_time, 2)}")
         ax3.grid()
         ax3.legend()
         ax3.set_title('Fz [N]')
@@ -549,6 +611,7 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
         ax1.plot(t, sensor_mx, 'b', label='Mx_sensor')
         ax1.plot(t, unclipped_wrench_mx, 'r', label='Mx_unclipped')
         ax1.plot(t, applied_wrench_mx, 'g', label='Mx_applied')
+        ax1.axvline(x=contact_time, color='k', linestyle='--', label=f"Time of contact: {np.round(contact_time, 2)}")
         ax1.legend()
         ax1.grid()
         ax1.set_title('Mx [Nm]')
@@ -557,6 +620,7 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
         ax2.plot(t, sensor_my, 'b', label='My_sensor')
         ax2.plot(t, unclipped_wrench_my, 'r', label='My_unclipped')
         ax2.plot(t, applied_wrench_my, 'g', label='My_applied')
+        ax2.axvline(x=contact_time, color='k', linestyle='--', label=f"Time of contact: {np.round(contact_time, 2)}")
         ax2.legend()
         ax2.grid()
         ax2.set_title('My [Nm]')
@@ -565,9 +629,18 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
         ax3.plot(t, sensor_mz, 'b', label='Mz_sensor')
         ax3.plot(t, unclipped_wrench_mz, 'r', label='Mz_unclipped')
         ax3.plot(t, applied_wrench_mz, 'g', label='Mz_applied')
+        ax3.axvline(x=contact_time, color='k', linestyle='--', label=f"Time of contact: {np.round(contact_time, 2)}")
         ax3.legend()
         ax3.grid()
         ax3.set_title('Mz [Nm]')
+
+        plt.figure("Labels")
+        plt.scatter(t, labels, label='classes')
+        plt.axvline(x=contact_time, color='k', linestyle='--', label=f"Time of contact: {np.round(contact_time, 2)}")
+        plt.grid()
+        plt.legend()
+        plt.ylabel('Classes [0/1]')
+        plt.xlabel('Time [sec]')
 
         plt.show()
     return success_flag

@@ -48,6 +48,7 @@ def run_robot(robot, start_pose, pose_desired, pose_error, control_dim, use_impe
     # Check if the UR controller is powered on and ready to run.
     if use_impedance:
         control = Controller(control_dim=control_dim)
+    time.sleep(0.1)
     robot.reset_error()
     # robot.set_payload_mass(m=1.12)
     # robot.set_payload_cog(CoG=(0.005, 0.00, 0.084))
@@ -56,9 +57,11 @@ def run_robot(robot, start_pose, pose_desired, pose_error, control_dim, use_impe
 
     #  move above the hole
     robot.movel(start_pose)
+    robot.movel(start_pose)
     time.sleep(0.5)  # Wait for the robot/measurements to be stable before starting the insertion
     robot.zero_ftsensor()
     robot.force_mode_set_damping(0)
+    robot.force_mode_set_gain_scaling(1)
 
     pose_init = np.array(robot.get_actual_tcp_pose(wait=True))
     vel_init = np.array(robot.get_actual_tcp_speed(wait=False))
@@ -76,8 +79,12 @@ def run_robot(robot, start_pose, pose_desired, pose_error, control_dim, use_impe
     vel_mod = np.zeros(6)
     # ----------- Control Settings -------------------
     # Control params for the free space:
+    # ----------for short distance to prevent floating---------------
     kp = np.array([4500.0, 4500.0, 2250.0, 50.0, 50.0, 50.0])
     kd = 2 * 7 * np.sqrt(kp)
+    # ---------for long distances-------------
+    # kp = np.array([4500.0, 4500.0, 5.0, 50.0, 50.0, 50.0])
+    # kd = 2 * 0.707 * np.sqrt(kp)
 
     # ------------ Forces initialization ------------
     internal_sensor_bias = np.copy(robot.get_tcp_force(wait=True))
@@ -159,7 +166,7 @@ def run_robot(robot, start_pose, pose_desired, pose_error, control_dim, use_impe
                     vel_mod = deepcopy(desired_pos[6:])
                     # contact pd parameters
                     # Daniel simulation PD parameters
-                    kp = np.array([5000.0, 5000.0, 250.0, 450.0, 450.0, 450.0])
+                    kp = np.array([5000.0, 5000.0, 2500.0, 450.0, 450.0, 450.0])
                     kd = 2 * np.sqrt(kp) * np.sqrt(2)
                     # Shir PD for impedance
                     # kp = np.array([700.0, 700.0, 200.0, 50.0, 50.0, 50.0])
@@ -215,8 +222,8 @@ def run_robot(robot, start_pose, pose_desired, pose_error, control_dim, use_impe
                     else:
                         # PD
                         print('Using PD')
-                        wrench_task = np.concatenate([desired_force, desired_torque])
-                        wrench_task[2] = -5 - internal_sensor_bias[2]
+                        compensation = internal_sensor_bias
+                        wrench_task = np.concatenate([desired_force, desired_torque]) - compensation
 
                 else:
                     # Free space
