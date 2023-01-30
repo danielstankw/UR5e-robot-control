@@ -16,7 +16,7 @@ from Control import Control
 from run_robot_functions import run_robot_BASE
 from run_robot import run_robot
 from run_robot_with_spiral import run_robot_with_spiral
-
+from run_robot_spiral_ml import run_robot_spiral_ml
 # from func_KeyInteruppt import func_robot_test
 
 
@@ -34,24 +34,24 @@ FT_sensor = Onrobot.FT_sensor()
 # init_pose = np.array([0.0859, -0.4810,  0.0837,   -0.0729,  3.1407, -0.0001])
 # goal_pose = np.array([0.0859, -0.4810,  0.0730,   -0.0729,  3.1407, -0.0001])
 # # -----------------------above hole: d_peg=4.2mm / d_hole=4.6mm ------------------
-init_pose = np.array([-0.1379, -0.5095,  0.0765,   -0.0728,  3.1407, -0.0001])
+init_pose = np.array([-0.1379, -0.5095, 0.0765, -0.0728, 3.1407, -0.0001])
 goal_pose = init_pose.copy()
 goal_pose[2] = 0.0663
-
 
 # init_pose = np.array([0.1012, -0.4877, 0.0869, -0.0730, 3.1407, -0.0000])
 # goal_pose = np.array([0.1012, -0.4877, 0.0731, -0.0730, 3.1407, -0.0000])
 
 
 plot_graphs = True
-use_spiral = True  # TODO: doesnt work yet
-use_circle = True
+use_spiral = True
+use_circle = False
 error_type = "fixed"
-error_vec = [6, 0.0, 0.0]  # mm
+error_vec = [3.3, 0.0, 0.0]  # mm
 control_dim = 26
-use_impedance = False
-time_insertion = 10
+use_impedance = True
+time_insertion = 20 + 20
 time_trajectory = 5
+use_ml = True
 
 # end of simulation values
 
@@ -83,16 +83,26 @@ for trial in range(1, num_of_trials + 1):
     # desired_pose: in the hole
     desired_pose = goal_pose + pose_error
 
-    if use_spiral:
+    if use_spiral and not use_ml:
         success_flag = run_robot_with_spiral(robot=robot, start_pose=start_pose,
                                              pose_desired=desired_pose, pose_error=pose_error,
                                              control_dim=control_dim, use_impedance=use_impedance,
-                                             plot_graphs=plot_graphs, circle=use_circle, sensor_class = FT_sensor, time_insertion=time_insertion,
-                                 time_trajectory=time_trajectory)
+                                             plot_graphs=plot_graphs, circle=use_circle, sensor_class=FT_sensor,
+                                             time_insertion=time_insertion,
+                                             time_trajectory=time_trajectory)
+
+    elif use_ml and use_spiral:
+        success_flag = run_robot_spiral_ml(robot=robot, start_pose=start_pose,
+                                           pose_desired=desired_pose, pose_error=pose_error,
+                                           control_dim=control_dim, use_impedance=use_impedance,
+                                           plot_graphs=plot_graphs, circle=use_circle, sensor_class=FT_sensor,
+                                           time_insertion=time_insertion,
+                                           time_trajectory=time_trajectory)
     else:
         success_flag = run_robot(robot=robot, start_pose=start_pose,
                                  pose_desired=desired_pose, pose_error=pose_error,
-                                 control_dim=control_dim, use_impedance=use_impedance, plot_graphs=plot_graphs, sensor_class = FT_sensor, time_insertion=time_insertion,
+                                 control_dim=control_dim, use_impedance=use_impedance, plot_graphs=plot_graphs,
+                                 sensor_class=FT_sensor, time_insertion=time_insertion,
                                  time_trajectory=time_trajectory)
 
     if success_flag == 'error' or success_flag == 'interrupt':

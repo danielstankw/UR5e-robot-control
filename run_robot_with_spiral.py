@@ -2,6 +2,8 @@ import numpy as np
 import numpy.linalg as LA
 import Onrobot
 import URBasic
+import os
+import pandas as pd
 import time
 from copy import deepcopy
 from minimum_jerk_planner import PathPlan
@@ -9,7 +11,7 @@ import angle_transformation as at
 from matplotlib import pyplot as plt
 from Controller import Controller
 
-ERROR_TOP = 0.7/1000
+ERROR_TOP = 0.7 / 1000
 
 
 # import traceback
@@ -33,7 +35,22 @@ def label_check(peg_xy, hole_xy):
     # print(radial_distance)
     if radial_distance < ERROR_TOP:
         print(radial_distance)
-        print('True')
+        print('Overlap')
+        return True
+    else:
+        return False
+
+
+def in_hole_stop(peg_xy, hole_xy):
+    hole_x = hole_xy[0]
+    hole_y = hole_xy[1]
+    peg_x = peg_xy[0]
+    peg_y = peg_xy[1]
+
+    radial_distance = np.sqrt((peg_x - hole_x) ** 2 + (peg_y - hole_y) ** 2)
+    # print(radial_distance)
+    if radial_distance <= 0.4 / 1000:
+        print('Inside Hole - Stopping!')
         return True
     else:
         return False
@@ -50,8 +67,8 @@ def next_spiral(theta_current, dt):
     # according to the article to assure successful insertion: p<=2d
     # where p is distance between consequent rings and d is clearance in centralized peg
     # v = 0.0009230 / 2   # total velocity (linear and angular)
-    v = 0.0025 / 1.5
-    p = 3 * 0.0003  # distance between the consecutive rings
+    v =  0.0015
+    p = 0.0006  # distance between the consecutive rings
 
     theta_dot_current = (2 * np.pi * v) / (p * np.sqrt(1 + theta_current ** 2))
     # todo: change +/- depending on the desired direction
@@ -62,12 +79,14 @@ def next_spiral(theta_current, dt):
     x_next = radius_next * np.cos(theta_next)
     y_next = radius_next * np.sin(theta_next)
     return theta_next, radius_next, x_next, y_next
+
+
 def next_circle(theta_current, dt):
     # overlap=error-2*radius_of_circle
-    time_per_circle = 6 #4
+    time_per_circle = 4  # 6 #4
     # 0.0025, 0.0026, 0.0027 with perturbation
     # 0.0028 always enters
-    radius_of_circle = 0.00265#3 / 1000#0
+    radius_of_circle = 0.002675  # 3 / 1000#0
     # increase in angle per dt
     d_theta = (2 * np.pi * dt) / time_per_circle
     theta_next = theta_current + d_theta
@@ -86,18 +105,18 @@ def circular_wrench_limiter(wrench_cmd):
     Fxy_size, Mxy_size = LA.norm(Fxy), LA.norm(Mxy)
 
     if Fxy_size > wrench_safety_limits['Fxy']:
-        print('clipping_1')
+        # print('clipping_1')
         Fxy_direction = Fxy / Fxy_size
         limited_wrench[:2] = wrench_safety_limits['Fxy'] * Fxy_direction
     if Fz < -wrench_safety_limits['Fz'] or Fz > wrench_safety_limits['Fz']:
-        print('clipping_2')
+        # print('clipping_2')
         limited_wrench[2] = np.sign(Fz) * wrench_safety_limits['Fz']
     if Mxy_size > wrench_safety_limits['Mxy']:
-        print('clipping_3')
+        # print('clipping_3')
         Mxy_direction = Mxy / Mxy_size
         limited_wrench[3:5] = wrench_safety_limits['Mxy'] * Mxy_direction
     if Mz < -wrench_safety_limits['Mz'] or Mz > wrench_safety_limits['Mz']:
-        print('clipping_4')
+        # print('clipping_4')
         limited_wrench[5] = np.sign(Mz) * wrench_safety_limits['Mz']
 
     if np.inf in wrench_cmd:
@@ -123,6 +142,11 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
     robot.reset_error()
     # robot.set_payload_mass(m=1.12)
     # robot.set_payload_cog(CoG=(0.005, 0.00, 0.084))
+    save_data = False
+
+    data_collection = True
+    if data_collection:
+        save_data = False
 
     #  move above the hole
     robot.movel(start_pose)
@@ -189,6 +213,7 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
         unclipped_wrench_mx, unclipped_wrench_my, unclipped_wrench_mz = [], [], []
         # for labeling
         labels = []
+        time_labels = []
 
     try:
         # ------------ Simulation(Loop) setup ----------------
@@ -276,7 +301,7 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
                         spiral_y.append(y_spiral_next + desired_pos[1])
                     else:
                         """Spiral Search mode"""
-                        print('Using spiral Mode')
+                        # print('Using spiral Mode')
                         theta_next, radius_next, x_spiral_next, y_spiral_next = next_spiral(theta_current, dt)
                         # add shift to the spiral search which is planned at (0,0)
                         spiral_x.append(x_spiral_next + desired_pos[0])
@@ -315,10 +340,10 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
                 desired_torque = (np.multiply(np.array(ori_error), np.array(kp[3:6]))
                                   + np.multiply(vel_ori_error, kd[3:6]))
 
-                # TODO: shir
+
                 if contact_flag:
                     if use_impedance:
-                        print('Impedance Control')
+                        # print('Impedance Control')
                         compensation = [0, 0, 1, 0, 0, 0] * internal_sensor_reading + [1, 1, 0, 1, 1,
                                                                                        1] * internal_sensor_bias
                         wrench_task = np.concatenate([desired_force, desired_torque]) - compensation
@@ -326,7 +351,7 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
 
                     else:
                         # PD
-                        print('PD Control')
+                        # print('PD Control')
                         compensation = deepcopy(internal_sensor_bias)
                         wrench_task = np.concatenate([desired_force, desired_torque]) - compensation
                         wrench_task[2] = -5 - internal_sensor_bias[2]
@@ -348,7 +373,20 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
 
                 label = label_check(peg_xy=ee_pose[:2], hole_xy=real_goal_pose[:2])
 
-                if True:
+                if data_collection:
+                    if in_hole_stop(peg_xy=ee_pose[:2], hole_xy=real_goal_pose[:2]):
+                        print('#############In HOLE!################')
+                        robot.set_force_remote(task_frame=[0, 0, 0, 0, 0, 0], selection_vector=[0, 0, 0, 0, 0, 0],
+                                               wrench=[0, 0, 0, 0, 0, 0], f_type=2, limits=[2, 2, 1.5, 1, 1, 1])
+                        robot.end_force_mode()
+                        robot.reset_error()
+                        success_flag = True
+                        break
+
+                if label:
+                    time_labels.append(t_curr)
+
+                if contact_flag:
                     # for graphs:
                     time_vec.append(t_curr)
                     # robot measurements
@@ -450,6 +488,17 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
     robot.reset_error()
 
     # ****** = = = = = = = = = = * * * * * Plots Section * * * * * = = = = = = = = = = = = *******
+    if save_data:
+        df = pd.DataFrame({'t': time_vec, 'x': ee_pos_x_vec, 'y': ee_pos_y_vec, 'z': ee_pos_z_vec,
+                           'rx': ee_ori_x_vec, 'ry': ee_ori_y_vec, 'rz': ee_ori_z_vec,
+                           'vx': ee_vel_x_vec, 'vy': ee_vel_y_vec, 'vz': ee_vel_z_vec,
+                           'Fx': sensor_fx, 'Fy': sensor_fy, 'Fz': sensor_fz,
+                           'Mx': sensor_mx, 'My': sensor_my, 'Mz': sensor_mz, 'Case': labels})
+        filename = "ep9.csv"
+        filepath = os.path.join('/home/danieln7/Desktop/RobotCodeDaniel/robotdatacollection', filename)
+        df.to_csv(filepath)
+        print('Successfully saved measurements')
+
     if plot_graphs:
         t = time_vec
 
@@ -459,7 +508,7 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
         y_error_top = ERROR_TOP * np.sin(theta) + real_goal_pose[1]
 
         if circle:
-            print((np.abs(max(robot_spiral_x))-np.abs(real_goal_pose[0]))*1000)
+            print((np.abs(max(robot_spiral_x)) - np.abs(real_goal_pose[0])) * 1000)
 
         plt.figure("Spiral")
         plt.plot(spiral_x, spiral_y, 'g', label='Ref position')
@@ -584,6 +633,8 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
         ax1.plot(t, unclipped_wrench_fx, 'r', label='Fx_unclipped')
         ax1.plot(t, applied_wrench_fx, 'g', label='Fx_applied')
         ax1.axvline(x=contact_time, color='k', linestyle='--', label=f"Time of contact: {np.round(contact_time, 2)}")
+        # ax1.axvline(x=time_labels[0], color='k', linestyle='--', label=f"Overlap: {np.round(time_labels[0], 2)}")
+        # ax1.axvline(x=time_labels[-1], color='k', linestyle='--', label=f"Overlap: {np.round(time_labels[-1], 2)}")
         ax1.grid()
         ax1.legend()
         ax1.set_title('Fx [N]')
@@ -593,6 +644,8 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
         ax2.plot(t, unclipped_wrench_fy, 'r', label='Fy_unclipped')
         ax2.plot(t, applied_wrench_fy, 'g', label='Fy_applied')
         ax2.axvline(x=contact_time, color='k', linestyle='--', label=f"Time of contact: {np.round(contact_time, 2)}")
+        # ax2.axvline(x=time_labels[0], color='k', linestyle='--', label=f"Overlap: {np.round(time_labels[0], 2)}")
+        # ax2.axvline(x=time_labels[-1], color='k', linestyle='--', label=f"Overlap: {np.round(time_labels[-1], 2)}")
         ax2.grid()
         ax2.legend()
         ax2.set_title('Fy [N]')
@@ -602,6 +655,8 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
         ax3.plot(t, unclipped_wrench_fz, 'r', label='Fz_unclipped')
         ax3.plot(t, applied_wrench_fz, 'g', label='Fz_applied')
         ax3.axvline(x=contact_time, color='k', linestyle='--', label=f"Time of contact: {np.round(contact_time, 2)}")
+        # ax3.axvline(x=time_labels[0], color='k', linestyle='--', label=f"Overlap: {np.round(time_labels[0], 2)}")
+        # ax3.axvline(x=time_labels[-1], color='k', linestyle='--', label=f"Overlap: {np.round(time_labels[-1], 2)}")
         ax3.grid()
         ax3.legend()
         ax3.set_title('Fz [N]')
@@ -612,6 +667,8 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
         ax1.plot(t, unclipped_wrench_mx, 'r', label='Mx_unclipped')
         ax1.plot(t, applied_wrench_mx, 'g', label='Mx_applied')
         ax1.axvline(x=contact_time, color='k', linestyle='--', label=f"Time of contact: {np.round(contact_time, 2)}")
+        # ax1.axvline(x=time_labels[0], color='k', linestyle='--', label=f"Overlap: {np.round(time_labels[0], 2)}")
+        # ax1.axvline(x=time_labels[-1], color='k', linestyle='--', label=f"Overlap: {np.round(time_labels[-1], 2)}")
         ax1.legend()
         ax1.grid()
         ax1.set_title('Mx [Nm]')
@@ -621,6 +678,8 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
         ax2.plot(t, unclipped_wrench_my, 'r', label='My_unclipped')
         ax2.plot(t, applied_wrench_my, 'g', label='My_applied')
         ax2.axvline(x=contact_time, color='k', linestyle='--', label=f"Time of contact: {np.round(contact_time, 2)}")
+        # ax2.axvline(x=time_labels[0], color='k', linestyle='--', label=f"Overlap: {np.round(time_labels[0], 2)}")
+        # ax2.axvline(x=time_labels[-1], color='k', linestyle='--', label=f"Overlap: {np.round(time_labels[-1], 2)}")
         ax2.legend()
         ax2.grid()
         ax2.set_title('My [Nm]')
@@ -630,6 +689,8 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
         ax3.plot(t, unclipped_wrench_mz, 'r', label='Mz_unclipped')
         ax3.plot(t, applied_wrench_mz, 'g', label='Mz_applied')
         ax3.axvline(x=contact_time, color='k', linestyle='--', label=f"Time of contact: {np.round(contact_time, 2)}")
+        # ax3.axvline(x=time_labels[0], color='k', linestyle='--', label=f"Overlap: {np.round(time_labels[0], 2)}")
+        # ax3.axvline(x=time_labels[-1], color='k', linestyle='--', label=f"Overlap: {np.round(time_labels[-1], 2)}")
         ax3.legend()
         ax3.grid()
         ax3.set_title('Mz [Nm]')
@@ -637,6 +698,8 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
         plt.figure("Labels")
         plt.scatter(t, labels, label='classes')
         plt.axvline(x=contact_time, color='k', linestyle='--', label=f"Time of contact: {np.round(contact_time, 2)}")
+        # plt.axvline(x=time_labels[0], color='k', linestyle='--', label=f"Overlap: {np.round(time_labels[0], 2)}")
+        # plt.axvline(x=time_labels[-1], color='k', linestyle='--', label=f"Overlap: {np.round(time_labels[-1], 2)}")
         plt.grid()
         plt.legend()
         plt.ylabel('Classes [0/1]')

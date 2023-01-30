@@ -12,6 +12,7 @@ class Controller(object):
         # initialize K,C,M parameters
         self.control_dim = control_dim
         # TODO 26 dim
+        # action = np.loadtxt('/home/danieln7/Desktop/RobotCodeDaniel/sim_files/scaled_params.csv', delimiter=',')
         action = np.loadtxt('daniel_params.csv', delimiter=',')
         self.set_control_param(action=action)
 
@@ -91,7 +92,6 @@ class Controller(object):
                                [action[27], 0, 0, 0, action[28], 0],
                                [0, 0, 0, 0, 0, action[29]]])
 
-
         if self.control_dim == 24:
             self.K = np.array([[action[0], 0, 0, 0, 0, 0],
                                [0, action[1], 0, 0, 0, 0],
@@ -143,6 +143,28 @@ class Controller(object):
             #                        [-38.88735199, 0., 0., 0., 32.1312713, 0.],
             #                        [0., 0., 0., 0., 0., 46.04693604]])
             #
+
+            # self.K = np.array([[action[0], 0, 0, 0, action[1], 0],
+            #                    [0, action[2], 0, action[3], 0, 0],
+            #                    [0, 0, action[4], 0, 0, 0],
+            #                    [0, action[5], 0, action[6], 0, 0],
+            #                    [action[7], 0, 0, 0, action[8], 0],
+            #                    [0, 0, 0, 0, 0, action[9]]])
+            #
+            # self.C = np.array([[action[10], 0, 0, 0, action[11], 0],
+            #                    [0, action[12], 0, action[13], 0, 0],
+            #                    [0, 0, action[14], 0, 0, 0],
+            #                    [0, action[15], 0, action[16], 0, 0],
+            #                    [action[17], 0, 0, 0, action[18], 0],
+            #                    [0, 0, 0, 0, 0, action[19]]])
+            #
+            # self.M = np.array([[action[20], 0, 0, 0, 0, 0],
+            #                    [0, action[21], 0, 0, 0, 0],
+            #                    [0, 0, action[22], 0, 0, 0],
+            #                    [0, 0, 0, action[23], 0, 0],
+            #                    [0, 0, 0, 0, action[24], 0],
+            #                    [0, 0, 0, 0, 0, action[25]]])
+
             self.K = np.array([[abs(action[0]), 0, 0, 0, action[1], 0],
                                [0, abs(action[2]), 0, action[3], 0, 0],
                                [0, 0, abs(action[4]), 0, 0, 0],
@@ -163,6 +185,7 @@ class Controller(object):
                                [0, 0, 0, abs(action[23]), 0, 0],
                                [0, 0, 0, 0, abs(action[24]), 0],
                                [0, 0, 0, 0, 0, abs(action[25])]])
+            print()
 
             # print('---------------- K -----------------------')
             # print(self.K)
