@@ -8,6 +8,7 @@ from minimum_jerk_planner import PathPlan
 import angle_transformation as at
 from matplotlib import pyplot as plt
 from Controller import Controller
+from helper_functions import circular_wrench_limiter, external_calibrate
 
 
 # import traceback
@@ -15,34 +16,6 @@ from Controller import Controller
 # # ------ this for stopping the while loop with Ctrl+C (KeyboardInterrupt) this has to be at the top of the file!!--------
 # os.environ['FOR_DISABLE_CONSOLE_CTRL_HANDLER'] = 'T'
 
-def circular_wrench_limiter(wrench_cmd):
-    # Limit the wrench in TOOL frame in a circular way. meaning that Fxy and Mxy consider as a vector with limited radius
-    wrench_safety_limits = dict(Fxy=20, Fz=15, Mxy=4, Mz=3)
-    limited_wrench = wrench_cmd.copy()
-    Fxy, Fz, Mxy, Mz = wrench_cmd[:2], wrench_cmd[2], wrench_cmd[3:5], wrench_cmd[5]
-    Fxy_size, Mxy_size = LA.norm(Fxy), LA.norm(Mxy)
-
-    if Fxy_size > wrench_safety_limits['Fxy']:
-        Fxy_direction = Fxy / Fxy_size
-        limited_wrench[:2] = wrench_safety_limits['Fxy'] * Fxy_direction
-    if Fz < -wrench_safety_limits['Fz'] or Fz > wrench_safety_limits['Fz']:
-        limited_wrench[2] = np.sign(Fz) * wrench_safety_limits['Fz']
-    if Mxy_size > wrench_safety_limits['Mxy']:
-        Mxy_direction = Mxy / Mxy_size
-        limited_wrench[3:5] = wrench_safety_limits['Mxy'] * Mxy_direction
-    if Mz < -wrench_safety_limits['Mz'] or Mz > wrench_safety_limits['Mz']:
-        limited_wrench[5] = np.sign(Mz) * wrench_safety_limits['Mz']
-
-    if np.inf in wrench_cmd:
-        print('\n!!!! inf wrench !!!!\n')
-
-    return limited_wrench
-
-def external_calibrate(external_sensor_tool, current_pose):
-    external_sensor_force = at.Tool2Base_vec(current_pose[3:], external_sensor_tool[:3])
-    external_sensor_moment = at.Tool2Base_vec(current_pose[3:], external_sensor_tool[3:])
-    external_sensor_base = np.append(external_sensor_force, external_sensor_moment)
-    return external_sensor_base
 
 def run_robot(robot, start_pose, pose_desired, pose_error, control_dim, use_impedance, plot_graphs, sensor_class, time_insertion, time_trajectory):
     # Check if the UR controller is powered on and ready to run.
