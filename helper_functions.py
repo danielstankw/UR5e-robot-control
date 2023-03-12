@@ -2,7 +2,7 @@ import numpy as np
 import numpy.linalg as LA
 import angle_transformation as at
 
-ERROR_TOP = 0.7 / 1000
+ERROR_TOP = 0.8 / 1000
 
 
 def label_check(peg_xy, hole_xy):
@@ -61,7 +61,9 @@ def next_spiral(theta_current, dt):
     # where p is distance between consequent rings and d is clearance in centralized peg
     # v = 0.0009230 / 2   # total velocity (linear and angular)
     v = 0.0015
-    p = 0.0006  # distance between the consecutive rings
+    # p = 0.0006  # distance between the consecutive rings
+    p = 0.0012  # distance between the consecutive rings
+
 
     theta_dot_current = (2 * np.pi * v) / (p * np.sqrt(1 + theta_current ** 2))
     # todo: change +/- depending on the desired direction

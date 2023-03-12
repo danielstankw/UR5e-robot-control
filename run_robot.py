@@ -64,9 +64,9 @@ def run_robot(robot, start_pose, pose_desired, pose_error, control_dim, use_impe
     external_sensor_bias_tool = np.copy(sensor_class.force_moment_feedback())
     external_sensor_bias_base = external_calibrate(external_sensor_bias_tool, pose_init)
 
-    print(f'int sensor reading (base) = {internal_sensor_bias}')
-    print(f'ext sensor reading (base) = {external_sensor_bias_base}')
-    print(f'ext sensor reading (tool) = {external_sensor_bias_tool}')
+    # print(f'int sensor reading (base) = {internal_sensor_bias}')
+    # print(f'ext sensor reading (base) = {external_sensor_bias_base}')
+    # print(f'ext sensor reading (tool) = {external_sensor_bias_tool}')
 
     # plotting
     if True:
@@ -139,11 +139,11 @@ def run_robot(robot, start_pose, pose_desired, pose_error, control_dim, use_impe
                     vel_mod = deepcopy(desired_pos[6:])
                     # contact pd parameters
                     # Daniel simulation PD parameters
-                    kp = np.array([5000.0, 5000.0, 2500.0, 450.0, 450.0, 450.0])
-                    kd = 2 * np.sqrt(kp) * np.sqrt(2)
+                    # kp = np.array([5000.0, 5000.0, 250.0, 450.0, 450.0, 450.0])
+                    # kd = 2 * np.sqrt(kp) * np.sqrt(2)
                     # Shir PD for impedance
-                    # kp = np.array([700.0, 700.0, 200.0, 50.0, 50.0, 50.0])
-                    # kd = 2 * 0.707 * np.sqrt(kp)
+                    kp = np.array([700.0, 700.0, 200.0, 50.0, 50.0, 50.0])
+                    kd = 2 * 0.707 * np.sqrt(kp)
 
                     # robot.force_mode_set_damping(0.5)
 
@@ -161,7 +161,7 @@ def run_robot(robot, start_pose, pose_desired, pose_error, control_dim, use_impe
                 if contact_flag:
                     if use_impedance:
                         # f_int or f_ext
-                        print('Using impedance')
+                        # print('Using impedance')
                         X_next = control.impedance_equation(pose_ref=desired_pos[:6], vel_ref=desired_pos[6:],
                                                             pose_mod=pose_mod, vel_mod=vel_mod,
                                                             f_int=f_ext, f0=f0, dt=dt)
@@ -184,19 +184,20 @@ def run_robot(robot, start_pose, pose_desired, pose_error, control_dim, use_impe
                 desired_torque = (np.multiply(np.array(ori_error), np.array(kp[3:6]))
                                   + np.multiply(vel_ori_error, kd[3:6]))
 
-                # TODO: shir
                 if contact_flag:
                     if use_impedance:
-                        print('Using impedance')
+                        # print('Using impedance')
                         compensation = [0, 0, 1, 0, 0, 0] * internal_sensor_reading + [1, 1, 0, 1, 1, 1] * internal_sensor_bias
                         wrench_task = np.concatenate([desired_force, desired_torque]) - compensation
                         wrench_task[2] = -5 - internal_sensor_bias[2]
 
                     else:
                         # PD
-                        print('Using PD')
+                        # print('Using PD')
                         compensation = internal_sensor_bias
                         wrench_task = np.concatenate([desired_force, desired_torque]) - compensation
+                        wrench_task[2] = -5 - internal_sensor_bias[2]
+
 
                 else:
                     # Free space

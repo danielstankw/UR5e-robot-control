@@ -1,28 +1,36 @@
 import numpy as np
 import numpy.linalg as LA
 import Onrobot
-import URBasic
 import os
 import pandas as pd
+import URBasic
+import tensorflow as tf
+from tensorflow import keras
 import time
 from copy import deepcopy
 from minimum_jerk_planner import PathPlan
 import angle_transformation as at
 from matplotlib import pyplot as plt
 from Controller import Controller
-from helper_functions import label_check, in_hole_stop, next_spiral, next_circle, circular_wrench_limiter, external_calibrate
+from helper_functions import label_check,  next_spiral, next_circle, circular_wrench_limiter, external_calibrate
 
 
-ERROR_TOP = 0.8 / 1000
+ERROR_TOP = 0.7/1000
 
 
 # import traceback
 # import os
 # # ------ this for stopping the while loop with Ctrl+C (KeyboardInterrupt) this has to be at the top of the file!!--------
 # os.environ['FOR_DISABLE_CONSOLE_CTRL_HANDLER'] = 'T'
+def append_vector(array, vector):
+    # Discard the oldest value
+    array.pop()
+    # Add the new value
+    array.insert(0, vector)
 
-def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_dim, use_impedance, plot_graphs, circle,
-                          sensor_class, time_insertion, time_trajectory, episode):
+
+def run_robot_spiral_ml(robot, start_pose, pose_desired, pose_error, control_dim, use_impedance, plot_graphs, circle,
+                          sensor_class, time_insertion, time_trajectory):
     # Check if the UR controller is powered on and ready to run.
     real_goal_pose = pose_desired - pose_error
     if use_impedance:
@@ -31,11 +39,6 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
     robot.reset_error()
     # robot.set_payload_mass(m=1.12)
     # robot.set_payload_cog(CoG=(0.005, 0.00, 0.084))
-    save_data = True
-
-    data_collection = True
-    if data_collection:
-        save_data = True
 
     #  move above the hole
     robot.movel(start_pose)
@@ -76,6 +79,16 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
     print(f'external sensor reading (tool) = {external_sensor_bias_tool}')
     print(f'external sensor reading (base) = {external_sensor_bias_base}')
 
+    # ML related
+    MEMORY_LEN = 300
+    FEATURE_SIZE = 5
+    model = keras.models.load_model('/home/danieln7/Desktop/RobotCode2023/ml_models/robot_feb1_full')
+    threshold = 0.5
+    memory = [[0] * FEATURE_SIZE for _ in range(MEMORY_LEN)]
+    pred_num = 5# 5  # 6# 100 -> equivalent to window of 12 and take it 50 times
+    pred_memory = [0 for _ in range(pred_num)]
+    wait_time = 0.0
+
     # plotting
     if True:
         time_vec = []
@@ -112,9 +125,15 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
 
         t_init = time.time()
         t_curr = 0
+        cnt = 0
         contact_flag = False
         contact_time = 0
         f0 = np.zeros(6)
+        existsOverlap = False
+        overlap = False
+        overlap_time = 0
+        end_wait = None
+        insertion = False
 
         contact_fz_threshold = 1.5  # [N]
         success_flag = False
@@ -168,6 +187,52 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
                     # time.sleep(1)
                     # robot.force_mode_set_damping(0.5)
 
+                # ML related - switch
+                if contact_flag:
+                    features = f_int[:5]    # fx,fy,fz,mx,my
+                    rev_features = features[::-1]
+                    features_list = rev_features.tolist()
+                    cnt += 1    # counter
+                    append_vector(memory, features_list)
+                    # we need to fill out the buffer else it's filled with zeros
+                    if cnt >= MEMORY_LEN:
+                        """
+                        Use ML model to predict prob of belonging to one of two classes:
+                            0: no overlap
+                            1: sufficient overlap for impedance insertion
+                        """
+                        # feature_names = ['Fz', 'Mx', 'My']
+                        # model was trained ex for 3 with t_start=0:  X=[My(2), Mx(2), Fz(2), My(1), Mx(1), Fz(1),My(0), Mx(0), Fz(0)]
+                        # TODO testing (added to not switch to impedance)
+                        # self.insertion = True
+                        if not insertion:
+                            x = np.array(memory).reshape(1, MEMORY_LEN * FEATURE_SIZE)
+                            y_predict = model(x)
+                            temp_overlap = (y_predict >= threshold)
+                            print('prediction', y_predict)
+                            inst_overlap = temp_overlap.numpy()[0][0]  # boolean true/false conversion tensor->bool
+                            temp = label_check(peg_xy=ee_pose[:2], hole_xy=real_goal_pose[:2])
+                            if temp or inst_overlap:
+                                print('Model detected overlap', inst_overlap)
+                                print('Geometric overlap', temp)
+                                print('t: ', t_curr)
+                            append_vector(pred_memory, inst_overlap)
+                            if all(pred_memory):
+                                print(f'SWITCH - last {pred_num} predictions were True')
+                                print(f"Goal has been reached at time {t_curr}")
+                                robot.set_force_remote(task_frame=[0, 0, 0, 0, 0, 0],
+                                                       selection_vector=[0, 0, 0, 0, 0, 0],
+                                                       wrench=[0, 0, 0, 0, 0, 0], f_type=2, limits=[2, 2, 1.5, 1, 1, 1])
+                                robot.end_force_mode()
+                                robot.reset_error()
+                                success_flag = True
+                                break
+
+                if overlap and existsOverlap is False:
+                    # controls the collection of the overlap time only at the first time
+                    overlap_time = t_curr
+                    existsOverlap = True
+
                 # ------------- Minimum Jerk Trajectory updating ----------------------
                 # Check if updating reference values with the minimum-jerk trajectory is necessary
                 if t_curr <= time_trajectory:
@@ -182,36 +247,57 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
 
                 # when contact is established
                 if contact_flag:
-                    if circle:
-                        """Circle mode"""
-                        theta_next, radius_next, x_spiral_next, y_spiral_next = next_circle(theta_current, dt)
+                    if existsOverlap:
+                        print("No Spiral: exists overlap")
+                        # set2: parameters for insertion
+                        kp = np.array([5000.0, 5000.0, 250.0, 450.0, 450.0, 450.0])
+                        kd = 2 * np.sqrt(kp) * np.sqrt(2)
+                        """
+                        wait_time: wait time once overlap was detected, to stabilize sensor reading
+                        """
+                        insertion = True  # Added to stop making predictions once we reach overlap stage
 
-                        spiral_x.append(x_spiral_next + desired_pos[0])
-                        spiral_y.append(y_spiral_next + desired_pos[1])
+                        if t_curr - overlap_time >= wait_time:
+                            if use_impedance:
+                                # f_int or f_ext
+                                print('Exist overlap - Using Impedance')
+                                X_next = control.impedance_equation(pose_ref=desired_pos[:6],
+                                                                    vel_ref=desired_pos[6:],
+                                                                    pose_mod=pose_mod, vel_mod=vel_mod,
+                                                                    f_int=f_ext, f0=f0, dt=dt)
+                                desired_pos = deepcopy(X_next)
+                                pose_mod = X_next[:6]
+                                vel_mod = X_next[6:]
+                        # else use PD
+                            else:
+                                print('Using PD instead of impedance')
+                        else:
+                            '''After overlap between peg and a hole happen, we wait for self.wait_time seconds'''
+                            print(
+                                f'Pausing for more {round(wait_time - (t_curr - overlap_time), 4)} out of {wait_time} sec')
+
                     else:
-                        """Spiral Search mode"""
-                        # print('Using spiral Mode')
-                        theta_next, radius_next, x_spiral_next, y_spiral_next = next_spiral(theta_current, dt)
-                        # add shift to the spiral search which is planned at (0,0)
-                        spiral_x.append(x_spiral_next + desired_pos[0])
-                        spiral_y.append(y_spiral_next + desired_pos[1])
+                        if circle:
+                            """Circle mode"""
+                            theta_next, radius_next, x_spiral_next, y_spiral_next = next_circle(theta_current, dt)
 
-                    theta_current = deepcopy(theta_next)
+                            spiral_x.append(x_spiral_next + desired_pos[0])
+                            spiral_y.append(y_spiral_next + desired_pos[1])
+                        else:
+                            """Spiral Search mode"""
+                            # print('Using spiral Mode')
+                            theta_next, radius_next, x_spiral_next, y_spiral_next = next_spiral(theta_current, dt)
+                            # add shift to the spiral search which is planned at (0,0)
+                            spiral_x.append(x_spiral_next + desired_pos[0])
+                            spiral_y.append(y_spiral_next + desired_pos[1])
 
-                    # we collect spiral trajectory at this point to exclude everything before contact was made
-                    robot_spiral_x.append(ee_pose[0])
-                    robot_spiral_y.append(ee_pose[1])
-                    # print('Spiral')
+                        theta_current = deepcopy(theta_next)
 
-                    if use_impedance:
-                        # f_int or f_ext
-                        print('Using Impedance')
-                        X_next = control.impedance_equation(pose_ref=desired_pos[:6], vel_ref=desired_pos[6:],
-                                                            pose_mod=pose_mod, vel_mod=vel_mod,
-                                                            f_int=f_ext, f0=f0, dt=dt)
-                        desired_pos = deepcopy(X_next)
-                        pose_mod = X_next[:6]
-                        vel_mod = X_next[6:]
+                        # we collect spiral trajectory at this point to exclude everything before contact was made
+                        robot_spiral_x.append(ee_pose[0])
+                        robot_spiral_y.append(ee_pose[1])
+                        # print('Spiral')
+
                 # ----------- - - - - = = = Control = = = - - - - -------------
                 desired_pos[:2] += np.array([x_spiral_next, y_spiral_next])
                 ori_real = at.AxisAngle_To_RotationVector(pose_desired[3:], ee_pose[3:])
@@ -229,17 +315,13 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
                 desired_torque = (np.multiply(np.array(ori_error), np.array(kp[3:6]))
                                   + np.multiply(vel_ori_error, kd[3:6]))
 
-
                 if contact_flag:
-                    if use_impedance:
-                        # print('Impedance Control')
+                    if use_impedance and existsOverlap:
                         compensation = [0, 0, 1, 0, 0, 0] * internal_sensor_reading + [1, 1, 0, 1, 1,
                                                                                        1] * internal_sensor_bias
                         wrench_task = np.concatenate([desired_force, desired_torque]) - compensation
                         wrench_task[2] = -5 - internal_sensor_bias[2]
-
                     else:
-                        # PD
                         # print('PD Control')
                         compensation = deepcopy(internal_sensor_bias)
                         wrench_task = np.concatenate([desired_force, desired_torque]) - compensation
@@ -262,20 +344,12 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
 
                 label = label_check(peg_xy=ee_pose[:2], hole_xy=real_goal_pose[:2])
 
-                if data_collection:
-                    if in_hole_stop(peg_xy=ee_pose[:2], hole_xy=real_goal_pose[:2]):
-                        print('#############In HOLE!################')
-                        robot.set_force_remote(task_frame=[0, 0, 0, 0, 0, 0], selection_vector=[0, 0, 0, 0, 0, 0],
-                                               wrench=[0, 0, 0, 0, 0, 0], f_type=2, limits=[2, 2, 1.5, 1, 1, 1])
-                        robot.end_force_mode()
-                        robot.reset_error()
-                        success_flag = True
-                        break
-
                 if label:
                     time_labels.append(t_curr)
 
-                if contact_flag:
+                print()
+
+                if True:
                     # for graphs:
                     time_vec.append(t_curr)
                     # robot measurements
@@ -330,9 +404,8 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
 
                 # ---------- Stop simulation if the robot reaches the goal --------
                 # goal without any error
-                if in_hole_stop(peg_xy=ee_pose[:2], hole_xy=real_goal_pose[:2]) or (np.abs(ee_pose[2] - real_goal_pose[2]) <= deviation_from_goal_z):
-                        # (np.abs(ee_pose[2] - real_goal_pose[2]) <= deviation_from_goal_z) \
-                        # and (LA.norm(ee_pose[:2] - real_goal_pose[:2]) <= deviation_from_goal_xy):
+                if (np.abs(ee_pose[2] - real_goal_pose[2]) <= deviation_from_goal_z) \
+                        and (LA.norm(ee_pose[:2] - real_goal_pose[:2]) <= deviation_from_goal_xy):
                     print('-------------------------- :) ----------------------')
                     print(f"Goal has been reached at time {t_curr}")
                     robot.set_force_remote(task_frame=[0, 0, 0, 0, 0, 0], selection_vector=[0, 0, 0, 0, 0, 0],
@@ -378,18 +451,18 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
     robot.reset_error()
 
     # ****** = = = = = = = = = = * * * * * Plots Section * * * * * = = = = = = = = = = = = *******
+    save_data = False
     if save_data:
         df = pd.DataFrame({'t': time_vec, 'x': ee_pos_x_vec, 'y': ee_pos_y_vec, 'z': ee_pos_z_vec,
                            'rx': ee_ori_x_vec, 'ry': ee_ori_y_vec, 'rz': ee_ori_z_vec,
                            'vx': ee_vel_x_vec, 'vy': ee_vel_y_vec, 'vz': ee_vel_z_vec,
                            'Fx': sensor_fx, 'Fy': sensor_fy, 'Fz': sensor_fz,
                            'Mx': sensor_mx, 'My': sensor_my, 'Mz': sensor_mz, 'Case': labels})
-        filename = "ep"+str(int(episode))+".csv"
-        # filename = 'eval.csv'
-        filepath = os.path.join('/home/danieln7/Desktop/RobotCode2023/spiral', filename)
+        filename = "ml_run1.csv"
+        filepath = os.path.join('/home/danieln7/Desktop/RobotCode2023/robotdatacollection2', filename)
         df.to_csv(filepath)
         print('Successfully saved measurements')
-
+    plot_graphs = True
     if plot_graphs:
         t = time_vec
 
@@ -397,20 +470,16 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
 
         x_error_top = ERROR_TOP * np.cos(theta) + real_goal_pose[0]
         y_error_top = ERROR_TOP * np.sin(theta) + real_goal_pose[1]
-        x_error_bottom = 0.0004 * np.cos(theta) + real_goal_pose[0]
-        y_error_bottom = 0.0004 * np.sin(theta) + real_goal_pose[1]
 
         if circle:
-            print((np.abs(max(robot_spiral_x)) - np.abs(real_goal_pose[0])) * 1000)
+            print((np.abs(max(robot_spiral_x))-np.abs(real_goal_pose[0]))*1000)
 
         plt.figure("Spiral")
-        plt.title(f'Spiral for: $e=3.5[mm]$, $v=1.5[m/s]$, $p=1.2[mm]$')
         plt.plot(spiral_x, spiral_y, 'g', label='Ref position')
         plt.plot(robot_spiral_x, robot_spiral_y, 'b', label='Robot position')
-        plt.plot(real_goal_pose[0], real_goal_pose[1], "ro", label='Hole Center')
-        plt.plot(spiral_x[0], spiral_y[0], "go", label='Spiral Start Point')
-        plt.plot(x_error_top, y_error_top, 'r', label='Max Impedance Error: 0.8mm')
-        plt.plot(x_error_bottom, y_error_bottom, 'g', label='Max Free Insertion Error: 0.4mm')
+        plt.plot(real_goal_pose[0], real_goal_pose[1], "ro", label='hole position')
+        plt.plot(spiral_x[0], spiral_y[0], "go", label='spiral start position')
+        plt.plot(x_error_top, y_error_top, 'r', label='Error_top')
         plt.plot(robot_spiral_x[0], robot_spiral_y[0], "bo")
         plt.legend()
         plt.grid()

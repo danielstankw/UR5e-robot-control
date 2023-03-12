@@ -12,8 +12,8 @@ class Controller(object):
         # initialize K,C,M parameters
         self.control_dim = control_dim
         # TODO 26 dim
-        # action = np.loadtxt('/home/danieln7/Desktop/RobotCodeDaniel/sim_files/scaled_params.csv', delimiter=',')
-        action = np.loadtxt('daniel_params.csv', delimiter=',')
+        action = np.loadtxt('/home/danieln7/Desktop/RobotCode2023/daniel_learning_runs/run3/action/scaled_params.csv', delimiter=',')
+        # action = np.loadtxt('daniel_params.csv', delimiter=',')
         self.set_control_param(action=action)
 
     def impedance_equation(self, pose_ref, vel_ref, pose_mod, vel_mod, f_int, f0, dt):
@@ -70,195 +70,98 @@ class Controller(object):
 
     def set_control_param(self, action):
 
-        if self.control_dim == 36:
-            self.K = np.array([[action[0], 0, 0, 0, action[1], 0],
-                               [0, action[2], 0, action[3], 0, 0],
-                               [0, 0, action[4], 0, 0, 0],
-                               [0, action[5], 0, action[6], 0, 0],
-                               [action[7], 0, 0, 0, action[8], 0],
-                               [0, 0, 0, 0, 0, action[9]]])
-
-            self.C = np.array([[action[10], 0, 0, 0, action[11], 0],
-                               [0, action[12], 0, action[13], 0, 0],
-                               [0, 0, action[14], 0, 0, 0],
-                               [0, action[15], 0, action[16], 0, 0],
-                               [action[17], 0, 0, 0, action[18], 0],
-                               [0, 0, 0, 0, 0, action[19]]])
-
-            self.M = np.array([[action[20], 0, 0, 0, action[21], 0],
-                               [0, action[22], 0, action[23], 0, 0],
-                               [0, 0, action[24], 0, 0, 0],
-                               [0, action[25], 0, action[26], 0, 0],
-                               [action[27], 0, 0, 0, action[28], 0],
-                               [0, 0, 0, 0, 0, action[29]]])
-
-        if self.control_dim == 24:
-            self.K = np.array([[action[0], 0, 0, 0, 0, 0],
-                               [0, action[1], 0, 0, 0, 0],
-                               [0, 0, action[2], 0, 0, 0],
-                               [0, 0, 0, action[3], 0, 0],
-                               [0, 0, 0, 0, action[4], 0],
-                               [0, 0, 0, 0, 0, action[5]]])
-
-            self.C = np.array([[action[6], 0, 0, 0, 0, 0],
-                               [0, action[7], 0, 0, 0, 0],
-                               [0, 0, action[8], 0, 0, 0],
-                               [0, 0, 0, action[9], 0, 0],
-                               [0, 0, 0, 0, action[10], 0],
-                               [0, 0, 0, 0, 0, action[11]]])
-
-            self.M = np.array([[action[12], 0, 0, 0, 0, 0],
-                               [0, action[13], 0, 0, 0, 0],
-                               [0, 0, action[14], 0, 0, 0],
-                               [0, 0, 0, action[15], 0, 0],
-                               [0, 0, 0, 0, action[16], 0],
-                               [0, 0, 0, 0, 0, action[17]]])
-
         if self.control_dim == 26:
+            use_shir = False
+            if use_shir:
             # # # Shirs Paper params:
-            # self.K = np.array([[9.90660954, 0., 0., 0., 46.63195038, 0.],
-            #                        [0., 33.75495148, 0., 157.51246643, 0., 0.],
-            #                        [0., 0., 18.89282036, 0., 0., 0.],
-            #                        [-38.88735199, 0., 0., 0., 32.1312713, 0.],
-            #                        [0., -17.89356422, 0., 79.34197998, 0., 0.],
-            #                        [0., 0., 0., 0., 0., 46.04693604]])
-            # self.C = np.array([[6.16129827, 0., 0., 0., -1.56223333, 0.],
-            #                        [0., 114.63842773, 0., 30.10368919, 0., 0.],
-            #                        [0., 0., 2.75284362, 0., 0., 0.],
-            #                        [0., -12.54157734, 0., 69.30596924, 0., 0.],
-            #                        [-42.15202713, 0., 0., 0., 75.14640808, 0.],
-            #                        [0., 0., 0., 0., 0., 26.27482986]])
-            # self.M = np.array([[28.00367928, 0., 0., 0., 34.70161819, 0.],
-            #                        [0., 71.05580902, 0., 37.04052734, 0., 0.],
-            #                        [0., 0., 48.4661026, 0., 0., 0.],
-            #                        [0., 39.43505096, 0., 63.75473022, 0., 0.],
-            #                        [-44.1451416, 0., 0., 0., 7.56819868, 0.],
-            #                        [0., 0., 0., 0., 0., 10.84090614]])
+            #     self.K = np.array([[9.90660954, 0., 0., 0., 46.63195038, 0.],
+            #                            [0., 33.75495148, 0., 157.51246643, 0., 0.],
+            #                            [0., 0., 18.89282036, 0., 0., 0.],
+            #                            [-38.88735199, 0., 0., 0., 32.1312713, 0.],
+            #                            [0., -17.89356422, 0., 79.34197998, 0., 0.],
+            #                            [0., 0., 0., 0., 0., 46.04693604]])
+                self.C = np.array([[6.16129827, 0., 0., 0., -1.56223333, 0.],
+                                       [0., 114.63842773, 0., 30.10368919, 0., 0.],
+                                       [0., 0., 2.75284362, 0., 0., 0.],
+                                       [0., -12.54157734, 0., 69.30596924, 0., 0.],
+                                       [-42.15202713, 0., 0., 0., 75.14640808, 0.],
+                                       [0., 0., 0., 0., 0., 26.27482986]])
+                self.M = np.array([[28.00367928, 0., 0., 0., 34.70161819, 0.],
+                                       [0., 71.05580902, 0., 37.04052734, 0., 0.],
+                                       [0., 0., 48.4661026, 0., 0., 0.],
+                                       [0., 39.43505096, 0., 63.75473022, 0., 0.],
+                                       [-44.1451416, 0., 0., 0., 7.56819868, 0.],
+                                       [0., 0., 0., 0., 0., 10.84090614]])
 
             # Shirs Paper params with correction of K matrix:
-            # self.K = np.array([[9.90660954, 0., 0., 0., 46.63195038, 0.],
-            #                        [0., 33.75495148, 0., 157.51246643, 0., 0.],
-            #                        [0., 0., 18.89282036, 0., 0., 0.],
-            #                        [0., -17.89356422, 0., 79.34197998, 0., 0.],
-            #                        [-38.88735199, 0., 0., 0., 32.1312713, 0.],
-            #                        [0., 0., 0., 0., 0., 46.04693604]])
+                self.K = np.array([[9.90660954, 0., 0., 0., 46.63195038, 0.],
+                                       [0., 33.75495148, 0., 157.51246643, 0., 0.],
+                                       [0., 0., 18.89282036, 0., 0., 0.],
+                                       [0., -17.89356422, 0., 79.34197998, 0., 0.],
+                                       [-38.88735199, 0., 0., 0., 32.1312713, 0.],
+                                       [0., 0., 0., 0., 0., 46.04693604]])
+            # #
+            else:
+                # print()
+                #
+                self.K = np.loadtxt('/home/danieln7/Desktop/RobotCode2023/daniel_learning_runs/run10/action/K.csv',
+                                    delimiter=',')
+                self.C = np.loadtxt('/home/danieln7/Desktop/RobotCode2023/daniel_learning_runs/run10/action/C.csv',
+                                    delimiter=',')
+                self.M = np.loadtxt('/home/danieln7/Desktop/RobotCode2023/daniel_learning_runs/run10/action/M.csv',
+                                    delimiter=',')
+                # print(self.K)
+                # print(self.C)
+                # print(self.M)
+
+
+                # self.K = np.array([[action[0], 0, 0, 0, action[1], 0],
+                #                    [0, action[2], 0, action[3], 0, 0],
+                #                    [0, 0, action[4], 0, 0, 0],
+                #                    [0, action[5], 0, action[6], 0, 0],
+                #                    [action[7], 0, 0, 0, action[8], 0],
+                #                    [0, 0, 0, 0, 0, action[9]]])
+                #
+                # self.C = np.array([[action[10], 0, 0, 0, action[11], 0],
+                #                    [0, action[12], 0, action[13], 0, 0],
+                #                    [0, 0, action[14], 0, 0, 0],
+                #                    [0, action[15], 0, action[16], 0, 0],
+                #                    [action[17], 0, 0, 0, action[18], 0],
+                #                    [0, 0, 0, 0, 0, action[19]]])
+                #
+                # self.M = np.array([[action[20], 0, 0, 0, 0, 0],
+                #                    [0, action[21], 0, 0, 0, 0],
+                #                    [0, 0, action[22], 0, 0, 0],
+                #                    [0, 0, 0, action[23], 0, 0],
+                #                    [0, 0, 0, 0, action[24], 0],
+                #                    [0, 0, 0, 0, 0, action[25]]])
+
+            # self.K = np.array([[abs(action[0]), 0, 0, 0, action[1], 0],
+            #                    [0, abs(action[2]), 0, action[3], 0, 0],
+            #                    [0, 0, abs(action[4]), 0, 0, 0],
+            #                    [0, action[5], 0, abs(action[6]), 0, 0],
+            #                    [action[7], 0, 0, 0, abs(action[8]), 0],
+            #                    [0, 0, 0, 0, 0, abs(action[9])]])
             #
-
-            # self.K = np.array([[action[0], 0, 0, 0, action[1], 0],
-            #                    [0, action[2], 0, action[3], 0, 0],
-            #                    [0, 0, action[4], 0, 0, 0],
-            #                    [0, action[5], 0, action[6], 0, 0],
-            #                    [action[7], 0, 0, 0, action[8], 0],
-            #                    [0, 0, 0, 0, 0, action[9]]])
+            # self.C = np.array([[abs(action[10]), 0, 0, 0, action[11], 0],
+            #                    [0, abs(action[12]), 0, action[13], 0, 0],
+            #                    [0, 0, abs(action[14]), 0, 0, 0],
+            #                    [0, action[15], 0, abs(action[16]), 0, 0],
+            #                    [action[17], 0, 0, 0, abs(action[18]), 0],
+            #                    [0, 0, 0, 0, 0, abs(action[19])]])
             #
-            # self.C = np.array([[action[10], 0, 0, 0, action[11], 0],
-            #                    [0, action[12], 0, action[13], 0, 0],
-            #                    [0, 0, action[14], 0, 0, 0],
-            #                    [0, action[15], 0, action[16], 0, 0],
-            #                    [action[17], 0, 0, 0, action[18], 0],
-            #                    [0, 0, 0, 0, 0, action[19]]])
-            #
-            # self.M = np.array([[action[20], 0, 0, 0, 0, 0],
-            #                    [0, action[21], 0, 0, 0, 0],
-            #                    [0, 0, action[22], 0, 0, 0],
-            #                    [0, 0, 0, action[23], 0, 0],
-            #                    [0, 0, 0, 0, action[24], 0],
-            #                    [0, 0, 0, 0, 0, action[25]]])
+            # self.M = np.array([[abs(action[20]), 0, 0, 0, 0, 0],
+            #                    [0, abs(action[21]), 0, 0, 0, 0],
+            #                    [0, 0, abs(action[22]), 0, 0, 0],
+            #                    [0, 0, 0, abs(action[23]), 0, 0],
+            #                    [0, 0, 0, 0, abs(action[24]), 0],
+            #                    [0, 0, 0, 0, 0, abs(action[25])]])
 
-            self.K = np.array([[abs(action[0]), 0, 0, 0, action[1], 0],
-                               [0, abs(action[2]), 0, action[3], 0, 0],
-                               [0, 0, abs(action[4]), 0, 0, 0],
-                               [0, action[5], 0, abs(action[6]), 0, 0],
-                               [action[7], 0, 0, 0, abs(action[8]), 0],
-                               [0, 0, 0, 0, 0, abs(action[9])]])
-
-            self.C = np.array([[abs(action[10]), 0, 0, 0, action[11], 0],
-                               [0, abs(action[12]), 0, action[13], 0, 0],
-                               [0, 0, abs(action[14]), 0, 0, 0],
-                               [0, action[15], 0, abs(action[16]), 0, 0],
-                               [action[17], 0, 0, 0, abs(action[18]), 0],
-                               [0, 0, 0, 0, 0, abs(action[19])]])
-
-            self.M = np.array([[abs(action[20]), 0, 0, 0, 0, 0],
-                               [0, abs(action[21]), 0, 0, 0, 0],
-                               [0, 0, abs(action[22]), 0, 0, 0],
-                               [0, 0, 0, abs(action[23]), 0, 0],
-                               [0, 0, 0, 0, abs(action[24]), 0],
-                               [0, 0, 0, 0, 0, abs(action[25])]])
+            print('---------------- K -----------------------')
+            print(self.K)
+            print('---------------- C -----------------------')
+            print(self.C)
+            print('---------------- M -----------------------')
+            print(self.M)
             print()
-
-            # print('---------------- K -----------------------')
-            # print(self.K)
-            # print('---------------- C -----------------------')
-            # print(self.C)
-            # print('---------------- M -----------------------')
-            # print(self.M)
-
-
-        if self.control_dim == 18:
-            self.K = np.array([[abs(action[0]), 0, 0, 0, 0, 0],
-                               [0, abs(action[1]), 0, 0, 0, 0],
-                               [0, 0, abs(action[2]), 0, 0, 0],
-                               [0, 0, 0, abs(action[3]), 0, 0],
-                               [0, 0, 0, 0, abs(action[4]), 0],
-                               [0, 0, 0, 0, 0, abs(action[5])]])
-
-            self.C = np.array([[abs(action[6]), 0, 0, 0, 0, 0],
-                               [0, abs(action[7]), 0, 0, 0, 0],
-                               [0, 0, abs(action[8]), 0, 0, 0],
-                               [0, 0, 0, abs(action[9]), 0, 0],
-                               [0, 0, 0, 0, abs(action[10]), 0],
-                               [0, 0, 0, 0, 0, abs(action[11])]])
-
-            self.M = np.array([[abs(action[12]), 0, 0, 0, 0, 0],
-                               [0, abs(action[13]), 0, 0, 0, 0],
-                               [0, 0, abs(action[14]), 0, 0, 0],
-                               [0, 0, 0, abs(action[15]), 0, 0],
-                               [0, 0, 0, 0, abs(action[16]), 0],
-                               [0, 0, 0, 0, 0, abs(action[17])]])
-
-        if self.control_dim == 30:
-            self.K = np.array([[abs(action[0]), 0, 0, 0, action[1], 0],
-                               [0, abs(action[2]), 0, action[3], 0, 0],
-                               [0, 0, abs(action[4]), 0, 0, 0],
-                               [0, action[5], 0, abs(action[6]), 0, 0],
-                               [action[7], 0, 0, 0, abs(action[8]), 0],
-                               [0, 0, 0, 0, 0, abs(action[9])]])
-
-            self.C = np.array([[abs(action[10]), 0, 0, 0, action[11], 0],
-                               [0, abs(action[12]), 0, action[13], 0, 0],
-                               [0, 0, abs(action[14]), 0, 0, 0],
-                               [0, action[15], 0, abs(action[16]), 0, 0],
-                               [action[17], 0, 0, 0, abs(action[18]), 0],
-                               [0, 0, 0, 0, 0, abs(action[19])]])
-
-            self.M = np.array([[abs(action[20]), 0, 0, 0, action[21], 0],
-                               [0, abs(action[22]), 0, action[23], 0, 0],
-                               [0, 0, abs(action[24]), 0, 0, 0],
-                               [0, action[25], 0, abs(action[26]), 0, 0],
-                               [action[27], 0, 0, 0, abs(action[28]), 0],
-                               [0, 0, 0, 0, 0, abs(action[29])]])
-
-        if self.control_dim == 20:
-            self.K = np.array([[abs(action[0]), 0, 0, 0, action[1], 0],
-                               [0, abs(action[2]), 0, action[3], 0, 0],
-                               [0, 0, abs(action[4]), 0, 0, 0],
-                               [0, action[5], 0, abs(action[6]), 0, 0],
-                               [action[7], 0, 0, 0, abs(action[8]), 0],
-                               [0, 0, 0, 0, 0, abs(action[9])]])
-
-            self.C = np.array([[abs(action[10]), 0, 0, 0, action[11], 0],
-                               [0, abs(action[12]), 0, action[13], 0, 0],
-                               [0, 0, abs(action[14]), 0, 0, 0],
-                               [0, action[15], 0, abs(action[16]), 0, 0],
-                               [action[17], 0, 0, 0, abs(action[18]), 0],
-                               [0, 0, 0, 0, 0, abs(action[19])]])
-
-            self.M = np.array([[44.93156433, 0., 0., 0., 0., 0.],
-                               [0., 53.0908432, 0., 0., 0., 0.],
-                               [0., 0., 5.83020163, 0., 0., 0.],
-                               [0., 0., 0., 131.73561096, 0., 0.],
-                               [0., 0., 0., 0., 7.31005669, 0.],
-                               [0., 0., 0., 0., 0., 71.55409241]])
-
 
