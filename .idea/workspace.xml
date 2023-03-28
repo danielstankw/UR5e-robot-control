@@ -4,34 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bbd5a07-1890-4643-a440-30521a70ff99" name="Changes" comment="...">
-      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/20mm_Peg_insertion_BASE.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/action_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/action_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/daniel_params.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/error_plotter.py" beforeDir="false" afterPath="$PROJECT_DIR$/error_plotter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper_functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/min_jerk_planner.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/minimum_jerk_planner.py" beforeDir="false" afterPath="$PROJECT_DIR$/minimum_jerk_planner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_robot_functions.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_robot_with_spiral.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_robot_with_spiral.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim_files/impedance_near_hole_with_spiral_ML.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim_files/model6/fingerprint.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim_files/model6/keras_metadata.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim_files/model6/saved_model.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim_files/model6/variables/variables.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim_files/model6/variables/variables.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim_files/model7/fingerprint.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim_files/model7/keras_metadata.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim_files/model7/saved_model.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim_files/model7/variables/variables.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim_files/model7/variables/variables.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim_files/scaled_params.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
+    <list default="true" id="6bbd5a07-1890-4643-a440-30521a70ff99" name="Changes" comment="Update">
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,13 +227,35 @@
       <option name="project" value="LOCAL" />
       <updated>1678603538394</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Update">
+      <created>1680009557013</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680009557013</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Update">
+      <created>1680009657641</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1680009657641</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Update">
+      <created>1680009668476</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680009668476</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />
     <MESSAGE value="moved helper functions to new file" />
     <MESSAGE value="..." />
-    <option name="LAST_COMMIT_MESSAGE" value="..." />
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
 </project>

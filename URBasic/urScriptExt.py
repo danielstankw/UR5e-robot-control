@@ -578,8 +578,6 @@ end
             print('Robot joint positions: [{: 06.4f}, {: 06.4f}, {: 06.4f},   {: 06.4f}, {: 06.4f}, {: 06.4f}]'.format(
                 *q))
 
-    # servoj modified by oren
-
     def init_servoj_remote(self):
         '''
         Servoj initialization
