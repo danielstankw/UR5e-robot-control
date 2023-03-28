@@ -2,9 +2,11 @@ import numpy as np
 import numpy.linalg as LA
 import angle_transformation as at
 
-ERROR_TOP = 0.8 / 1000
+ERROR_TOP = 0.8 / 1000  # upper impedance bound
+ERROR_MIN = 0.4 / 1000  # lower error bound, i.e. free insertion
 
 
+"""Contains functions shared and used among different files"""
 def label_check(peg_xy, hole_xy):
     """
     Function responsible for labeling classes
@@ -42,7 +44,7 @@ def in_hole_stop(peg_xy, hole_xy):
 
     radial_distance = np.sqrt((peg_x - hole_x) ** 2 + (peg_y - hole_y) ** 2)
     # print(radial_distance)
-    if radial_distance <= 0.4 / 1000:
+    if radial_distance <= ERROR_MIN:
         print('Inside Hole - Stopping!')
         return True
     else:
@@ -59,11 +61,8 @@ def next_spiral(theta_current, dt):
     """
     # according to the article to assure successful insertion: p<=2d
     # where p is distance between consequent rings and d is clearance in centralized peg
-    # v = 0.0009230 / 2   # total velocity (linear and angular)
     v = 0.0015
-    # p = 0.0006  # distance between the consecutive rings
-    p = 0.0012  # distance between the consecutive rings
-
+    p = 0.0006  # distance between the consecutive rings
 
     theta_dot_current = (2 * np.pi * v) / (p * np.sqrt(1 + theta_current ** 2))
     # todo: change +/- depending on the desired direction

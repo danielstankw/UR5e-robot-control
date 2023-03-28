@@ -4,13 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bbd5a07-1890-4643-a440-30521a70ff99" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/helper_functions.py" afterDir="false" />
+    <list default="true" id="6bbd5a07-1890-4643-a440-30521a70ff99" name="Changes" comment="...">
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_robot.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_robot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_robot_spiral_ml.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_robot_spiral_ml.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20mm_Peg_insertion_BASE.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Control.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/action_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/action_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/daniel_params.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/error_plotter.py" beforeDir="false" afterPath="$PROJECT_DIR$/error_plotter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/min_jerk_planner.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minimum_jerk_planner.py" beforeDir="false" afterPath="$PROJECT_DIR$/minimum_jerk_planner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_robot_functions.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/run_robot_with_spiral.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_robot_with_spiral.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim2real_Control_Params_folder.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_files/impedance_near_hole_with_spiral_ML.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_files/model6/fingerprint.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_files/model6/keras_metadata.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_files/model6/saved_model.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_files/model6/variables/variables.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_files/model6/variables/variables.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_files/model7/fingerprint.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_files/model7/keras_metadata.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_files/model7/saved_model.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_files/model7/variables/variables.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_files/model7/variables/variables.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_files/scaled_params.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,14 +56,72 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/danieln7/Desktop/RobotCode2023/spiral/spiral4&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/spiral/spiral4" />
+      <recent name="$PROJECT_DIR$/spiral/spiral3" />
+      <recent name="$PROJECT_DIR$/ml_models" />
+      <recent name="$PROJECT_DIR$/models" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/spiral/spiral6" />
+      <recent name="$PROJECT_DIR$/spiral/spiral5" />
+      <recent name="$PROJECT_DIR$/spiral/spiral4/p2" />
+      <recent name="$PROJECT_DIR$/spiral/spiral2" />
+      <recent name="$PROJECT_DIR$/spiral/spiral1" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="action_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RobotCode2023" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/action_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="error_plotter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RobotCode2023" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/error_plotter.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="RobotCode2023" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -58,15 +137,68 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="read_csv" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RobotCode2023" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/robotdatacollection" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/robotdatacollection/read_csv.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="speed_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RobotCode2023" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/speed_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.action_test" />
+      <item itemvalue="Python.error_plotter" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.read_csv" />
+      <item itemvalue="Python.speed_test" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.action_test" />
+        <item itemvalue="Python.error_plotter" />
+        <item itemvalue="Python.speed_test" />
+        <item itemvalue="Python.read_csv" />
       </list>
     </recent_temporary>
   </component>
@@ -93,11 +225,41 @@
       <option name="project" value="LOCAL" />
       <updated>1675073977360</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="moved helper functions to new file">
+      <created>1675075027340</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675075027340</updated>
+    </task>
+    <task id="LOCAL-00004" summary="moved helper functions to new file">
+      <created>1675075031752</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675075031752</updated>
+    </task>
+    <task id="LOCAL-00005" summary="...">
+      <created>1675075038471</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675075038471</updated>
+    </task>
+    <task id="LOCAL-00006" summary="...">
+      <created>1678603538394</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1678603538394</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="moved helper functions to new file" />
+    <MESSAGE value="..." />
+    <option name="LAST_COMMIT_MESSAGE" value="..." />
   </component>
 </project>

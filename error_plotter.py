@@ -1,10 +1,9 @@
-import seaborn as sns
-import random
 import numpy as np
 from matplotlib import pyplot as plt
-
-
 import pickle
+
+"""Used for plotting successful and unsuccesful insertions"""
+
 file = './errors_testing'
 name = file + '.pkl'
 with open(name, 'rb') as f:

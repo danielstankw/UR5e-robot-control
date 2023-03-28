@@ -1,11 +1,11 @@
 import numpy as np
 from matplotlib import pyplot as plt
 import angle_transformation as at
-from scipy.spatial.transform import Rotation as R
 
 
 class PathPlan(object):
     """
+    Minimum jerk planner for both position and orientation
     """
 
     def __init__(self, initial_pose, target_pose, total_time):

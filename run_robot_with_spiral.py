@@ -14,6 +14,7 @@ from helper_functions import label_check, in_hole_stop, next_spiral, next_circle
 
 
 ERROR_TOP = 0.8 / 1000
+ERROR_MIN = 0.4 / 1000
 
 
 # import traceback
@@ -384,8 +385,9 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
                            'vx': ee_vel_x_vec, 'vy': ee_vel_y_vec, 'vz': ee_vel_z_vec,
                            'Fx': sensor_fx, 'Fy': sensor_fy, 'Fz': sensor_fz,
                            'Mx': sensor_mx, 'My': sensor_my, 'Mz': sensor_mz, 'Case': labels})
+
         filename = "ep"+str(int(episode))+".csv"
-        # filename = 'eval.csv'
+        # filename = 'ep2.csv'
         filepath = os.path.join('/home/danieln7/Desktop/RobotCode2023/spiral', filename)
         df.to_csv(filepath)
         print('Successfully saved measurements')
@@ -397,8 +399,8 @@ def run_robot_with_spiral(robot, start_pose, pose_desired, pose_error, control_d
 
         x_error_top = ERROR_TOP * np.cos(theta) + real_goal_pose[0]
         y_error_top = ERROR_TOP * np.sin(theta) + real_goal_pose[1]
-        x_error_bottom = 0.0004 * np.cos(theta) + real_goal_pose[0]
-        y_error_bottom = 0.0004 * np.sin(theta) + real_goal_pose[1]
+        x_error_bottom = ERROR_MIN * np.cos(theta) + real_goal_pose[0]
+        y_error_bottom = ERROR_MIN * np.sin(theta) + real_goal_pose[1]
 
         if circle:
             print((np.abs(max(robot_spiral_x)) - np.abs(real_goal_pose[0])) * 1000)
