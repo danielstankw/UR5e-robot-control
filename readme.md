@@ -1,6 +1,5 @@
-### General Information
-This is code for operating Ur5e robot via Python script in 125[Hz].
-The base of the code comes from RopeRobotics (https://github.com/martinbjerge/ur-interface)
+# Python code used for communication with the UR5e robot.
+The communication is done 125[Hz]. The repo is based of the RopeRobotics code: (https://github.com/martinbjerge/ur-interface)
 
 ### What can it be used for?
 * Defines minimum jerk planner and designs minimum-jerk trajectory
